@@ -29,7 +29,7 @@ const History = () => {
     <table className="table table-bordered">
       <thead className="thead-light">
         <tr>
-          <th scope="col">الشحن</th>
+          <th scope="col">التوصيل</th>
           <th scope="col">العدد</th>
           <th scope="col">اللون</th>
           <th scope="col">الماركة</th>
@@ -42,10 +42,10 @@ const History = () => {
         {order.products.map((p, i) => (
           <tr key={i}>
             <td>
-              {p.product.shipping === "Yes" ? (
-                <CheckCircleOutlined style={{ color: "green" }} />
+              {p.product.shipping === "مجاني" ? (
+                <p>مجاني</p>
               ) : (
-                <CloseCircleOutlined style={{ color: "red" }} />
+                <p> 5 JD</p>
               )}
             </td>
             <td>{p.count}</td>

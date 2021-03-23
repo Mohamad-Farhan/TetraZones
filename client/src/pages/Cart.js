@@ -33,7 +33,7 @@ const Cart = ({ history }) => {
       <thead className="thead-light">
         <tr>
           <th scope="col">أزل المنتج</th>
-          <th scope="col">الشحن</th>
+          <th scope="col">التوصيل</th>
           <th scope="col">العدد</th>
           <th scope="col">اللون</th>
           <th scope="col">الماركة</th>

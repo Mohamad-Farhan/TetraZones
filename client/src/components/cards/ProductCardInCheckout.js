@@ -3,11 +3,9 @@ import ModalImage from "react-modal-image";
 import laptop from "../../images/laptop.png";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import {
-  CheckCircleOutlined,
-  CloseCircleOutlined,
-  CloseOutlined,
-} from "@ant-design/icons";
+import { CloseOutlined } from "@ant-design/icons";
+
+const colors = []
 
 const ProductCardInCheckout = ({ p }) => {
   let dispatch = useDispatch();
@@ -30,6 +28,35 @@ const ProductCardInCheckout = ({ p }) => {
       cart.map((product, i) => {
         if (product._id == p._id) {
           cart[i].count = count;
+        }
+      });
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      dispatch({
+        type: "ADD_TO_CART",
+        payload: cart,
+      });
+    }
+  };
+
+  const handleColorChange = (e) => {
+    let color = e.target.value < 1 ? 1 : e.target.value;
+
+    if (color == colors) {
+      toast.error(`No color ${p.color}`);
+      return;
+    }
+
+    let cart = [];
+
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("cart")) {
+        cart = JSON.parse(localStorage.getItem("cart"));
+      }
+
+      cart.map((product, i) => {
+        if (product._id == p._id) {
+          cart[i].color = color;
         }
       });
 
@@ -72,10 +99,10 @@ const ProductCardInCheckout = ({ p }) => {
           />
         </td>
         <td className="text-center">
-          {p.shipping === "Yes" ? (
-            <CheckCircleOutlined className="text-success" />
+          {p.shipping === "مجاني" ? (
+            <p>مجاني</p>
           ) : (
-            <CloseCircleOutlined className="text-danger" />
+            <p>5 JD</p>
           )}
         </td>
         <td className="text-center">
@@ -87,7 +114,12 @@ const ProductCardInCheckout = ({ p }) => {
           />
         </td>
         <td>
-          {p.color}
+          <input
+            type="text"
+            className="form-control"
+            value={p.color}
+            onChange={handleColorChange}
+          />
         </td>
         <td>{p.brand}</td>
         <td>{p.price} JD</td>

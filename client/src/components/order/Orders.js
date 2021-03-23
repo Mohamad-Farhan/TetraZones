@@ -14,7 +14,7 @@ const Orders = ({ orders, handleStatusChange }) => {
           <th scope="col">Brand</th>
           <th scope="col">Color</th>
           <th scope="col">Count</th>
-          <th scope="col">Shipping</th>
+          <th scope="col">Conduction</th>
         </tr>
       </thead>
 
@@ -32,10 +32,10 @@ const Orders = ({ orders, handleStatusChange }) => {
             <td>{p.color}</td>
             <td>{p.count}</td>
             <td>
-              {p.product.shipping === "Yes" ? (
-                <CheckCircleOutlined style={{ color: "green" }} />
+              {p.product.shipping === "مجاني" ? (
+                <p>Free</p>
               ) : (
-                <CloseCircleOutlined style={{ color: "red" }} />
+                <p>5 JD</p>
               )}
             </td>
           </tr>

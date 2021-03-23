@@ -228,7 +228,7 @@ const Shop = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-3 pt-2">
-            <h4>البحث</h4>
+            <h4 className='text-right'>البحث</h4>
             <hr />
 
             <Menu
@@ -311,11 +311,11 @@ const Shop = () => {
             </Menu>
           </div>
 
-          <div className="col-md-9 pt-2">
+          <div className="col-md-9 pt-2 float-right">
             {loading ? (
               <h4 className="text-danger">Loading...</h4>
             ) : (
-              <h4 className="text-danger">المنتجات</h4>
+              <h4 className="text-danger text-right">المنتجات</h4>
             )}
 
             {products.length < 1 && <p>لا يوجد منتجات</p>}

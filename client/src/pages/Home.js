@@ -6,7 +6,6 @@ import SubList from "../components/sub/SubList";
 import cover from '../images/cover.png';
 import { Link } from "react-router-dom";
 import Header from '../components/nav/Header';
-import Add from '../images/add2.png';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
@@ -20,7 +19,10 @@ const Home = () => {
             <img src={cover} className="sliderimg img-fluid" alt="Responsive image" style={{ width: 1400 }} />
           </Link>
           <Link to='/shop'>
-            <img src={Add} className=" sliderimg img-fluid" alt="Responsive image" style={{ width: 1400 }} />
+            <img src={cover} className=" sliderimg img-fluid" alt="Responsive image" style={{ width: 1400 }} />
+          </Link>
+          <Link to='/shop'>
+            <img src={cover} className=" sliderimg img-fluid" alt="Responsive image" style={{ width: 1400 }} />
           </Link>
         </AliceCarousel>
       </div>

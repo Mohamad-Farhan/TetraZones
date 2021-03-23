@@ -10,7 +10,7 @@ const ProductListItems = ({ product }) => {
     color,
     brand,
     quantity,
-    sold,
+    // sold,
   } = product;
 
   return (
@@ -74,15 +74,15 @@ const ProductListItems = ({ product }) => {
         <span className="label label-default label-pill pull-xs-letf">
           {quantity}
         </span>
-        <p className="label label-default label-pill pull-xs-right">{" "}عدد المنتجات التاحة</p>
+        <p className="label label-default label-pill pull-xs-right">{" "}عدد المنتجات المتاحة</p>
       </li>
 
-      <li className="list-group-item">
+      {/* <li className="list-group-item">
         <span className="label label-default label-pill pull-xs-left">
           {sold}
         </span>
         <p className="label label-default label-pill pull-xs-right">{" "}المنتجات المباعة</p>
-      </li>
+      </li> */}
     </ul>
   );
 };
