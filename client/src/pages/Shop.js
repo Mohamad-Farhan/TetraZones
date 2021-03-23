@@ -15,9 +15,8 @@ import {
 } from "@ant-design/icons";
 import Star from "../components/forms/Star";
 import Header from '../components/nav/Header';
-import { getOrders } from "../functions/admin";
 
-const { SubMenu, ItemGroup } = Menu;
+const { SubMenu } = Menu;
 
 const Shop = () => {
   const [products, setProducts] = useState([]);

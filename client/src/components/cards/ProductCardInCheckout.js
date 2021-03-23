@@ -12,28 +12,6 @@ import {
 const ProductCardInCheckout = ({ p }) => {
   let dispatch = useDispatch();
 
-  const handleColorChange = (e) => {
-
-    let cart = [];
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("cart")) {
-        cart = JSON.parse(localStorage.getItem("cart"));
-      }
-
-      cart.map((product, i) => {
-        if (product._id === p._id) {
-          cart[i].color = e.target.value;
-        }
-      });
-
-      localStorage.setItem("cart", JSON.stringify(cart));
-      dispatch({
-        type: "ADD_TO_CART",
-        payload: cart,
-      });
-    }
-  };
-
   const handleQuantityChange = (e) => {
     let count = e.target.value < 1 ? 1 : e.target.value;
 

@@ -13,7 +13,6 @@ const ProductCard = ({ product }) => {
   const [tooltip, setTooltip] = useState("Click to add");
 
   // redux
-  const { user, cart } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
@@ -62,6 +61,7 @@ const ProductCard = ({ product }) => {
       <Card
         cover={
           <img
+            alt='product image'
             src={images && images.length ? images[0].url : laptop}
             style={{ height: "150px", objectFit: "cover" }}
             className="p-1"
@@ -72,7 +72,7 @@ const ProductCard = ({ product }) => {
             <EyeOutlined className="text-warning" /> <br /> عرض المنتج
           </Link>,
           <Tooltip title={tooltip}>
-            <a onClick={handleAddToCart} disabled={product.quantity < 1}>
+            <a href='' onClick={handleAddToCart} disabled={product.quantity < 1}>
               <ShoppingCartOutlined className="text-danger" /> <br />
               {product.quantity < 1 ? "انتهى المنتج" : "اضف الى السلة"}
             </a>
