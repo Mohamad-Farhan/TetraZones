@@ -32,14 +32,14 @@ const Cart = ({ history }) => {
     <table className="table table-bordered">
       <thead className="thead-light">
         <tr>
-          <th scope="col">أزل المنتج</th>
-          <th scope="col">التوصيل</th>
-          <th scope="col">العدد</th>
-          <th scope="col">اللون</th>
-          <th scope="col">الماركة</th>
-          <th scope="col">السعر</th>
-          <th scope="col">الأسم</th>
-          <th scope="col">الصورة</th>
+          <th scope="col" className='text-right'>أزل المنتج</th>
+          <th scope="col" className='text-right'>التوصيل</th>
+          <th scope="col" className='text-right'>العدد</th>
+          <th scope="col" className='text-right'>اللون/ الرجاء اختيار اللون</th>
+          <th scope="col" className='text-right'>الماركة</th>
+          <th scope="col" className='text-right'>السعر</th>
+          <th scope="col" className='text-right'>الأسم</th>
+          <th scope="col" className='text-right'>الصورة</th>
         </tr>
       </thead>
 

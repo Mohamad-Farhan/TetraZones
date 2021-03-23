@@ -40,7 +40,7 @@ const ProductCardInCheckout = ({ p }) => {
   };
 
   const handleColorChange = (e) => {
-    let color = e.target.value < 1 ? 1 : e.target.value;
+    let color = e.target.value;
 
     if (color == colors) {
       toast.error(`No color ${p.color}`);
@@ -99,7 +99,7 @@ const ProductCardInCheckout = ({ p }) => {
           />
         </td>
         <td className="text-center">
-          {p.shipping === "مجاني" ? (
+          {p.shipping === "Free" ? (
             <p>مجاني</p>
           ) : (
             <p>5 JD</p>

@@ -32,7 +32,7 @@ const Orders = ({ orders, handleStatusChange }) => {
             <td>{p.color}</td>
             <td>{p.count}</td>
             <td>
-              {p.product.shipping === "مجاني" ? (
+              {p.product.shipping === "Free" ? (
                 <p>Free</p>
               ) : (
                 <p>5 JD</p>
