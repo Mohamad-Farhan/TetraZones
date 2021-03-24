@@ -3,7 +3,7 @@ import AdminNav from "../../components/nav/AdminNav";
 import {
     getUserLastNames, getUserAddresses,
     getUserCityes, getUserPhoneNumbers,
-    getUserRegiones, getUserFirstNames, getOrders
+    getUserRegiones, getUserFirstNames
 } from "../../functions/admin";
 import { useSelector } from "react-redux";
 import Header from '../../components/nav/Header';
