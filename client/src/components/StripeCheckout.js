@@ -3,12 +3,12 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useSelector, useDispatch } from "react-redux";
 import { createPaymentIntent } from "../functions/stripe";
 import { Link } from "react-router-dom";
-import { Card } from "antd";
+import { Card } from "../antd";
 import { DollarOutlined, CheckOutlined } from "@ant-design/icons";
 import Laptop from "../images/laptop.png";
 import { createOrder, emptyUserCart } from "../functions/user";
 
-const StripeCheckout = ({ history }) => {
+const StripeCheckout = () => {
   const dispatch = useDispatch();
   const { user, coupon } = useSelector((state) => ({ ...state }));
 
