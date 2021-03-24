@@ -4,7 +4,6 @@ import {
   getUserOrders,
 } from "../../functions/user";
 import { useSelector } from "react-redux";
-import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import ShowPaymentInfo from "../../components/cards/ShowPaymentInfo";
 import Header from '../../components/nav/Header'
 import { Link } from "react-router-dom";
@@ -42,7 +41,7 @@ const History = () => {
         {order.products.map((p, i) => (
           <tr key={i}>
             <td>
-              {p.product.shipping === "مجاني" ? (
+              {p.product.shipping === "Free" ? (
                 <p>مجاني</p>
               ) : (
                 <p> 5 JD</p>

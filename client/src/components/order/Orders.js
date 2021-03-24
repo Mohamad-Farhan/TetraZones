@@ -62,8 +62,8 @@ const Orders = ({ orders, handleStatusChange }) => {
                   defaultValue={order.orderStatus}
                   name="status"
                 >
-                  <option value="Processing">Processing</option>
                   <option value="Not Processed">Not Processed</option>
+                  <option value="Processing">Processing</option>
                   <option value="Dispatched">Dispatched</option>
                   <option value="Cancelled">Cancelled</option>
                   <option value="Completed">Completed</option>

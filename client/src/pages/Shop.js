@@ -296,10 +296,10 @@ const Shop = () => {
 
               {/* shipping */}
               <SubMenu
-              className='float-right'
+              className=''
                 key="7"
                 title={
-                  <span className="h6 float-right">
+                  <span className="h6">
                     <DownSquareOutlined /> التوصيل
                 </span>
                 }
