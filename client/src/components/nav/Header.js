@@ -98,6 +98,10 @@ const Header = () => {
             </Item>
           )}
 
+          <Item>
+            <Link to='/help'>هل تواجه صعوبة؟</Link>
+          </Item>
+
           <Item icon={<LogoutOutlined />} onClick={logout}>
             تسجيل الخروج
           </Item>

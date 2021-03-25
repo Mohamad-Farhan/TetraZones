@@ -92,7 +92,6 @@ const Login = ({ history }) => {
             roleBasedRedirect(res);
           })
           .catch((err) => console.log(err));
-        // history.push("/");
       })
       .catch((err) => {
         console.log(err);
@@ -127,12 +126,12 @@ const Login = ({ history }) => {
       <Button
         onClick={handleSubmit}
         type="blue"
-        className="mb-3"
+        className="mb-2 w-500"
         block
         shape="round"
         icon={<MailOutlined />}
         size="large"
-        disabled={!email || password.length < 6}
+        // disabled={!email || password.length < 6}
       >
         تسجيل الدخول باستخدام الاميل
       </Button>
@@ -141,35 +140,35 @@ const Login = ({ history }) => {
 
   return (
     <>
-    <LRHeader/>
-    <div className="container p-5">
-      <div className="row">
-        <div className="col-md-6 offset-md-3">
-          {loading ? (
-            <h4 className="text-danger">Loading...</h4>
-          ) : (
-            <h4>تسجيل الدخول</h4>
-          )}
-          {loginForm()}
+      <LRHeader />
+      <div className="container p-5">
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            {loading ? (
+              <h4 className="text-danger">Loading...</h4>
+            ) : (
+              <h4>تسجيل الدخول</h4>
+            )}
+            {loginForm()}
 
-          <Button
-            onClick={googleLogin}
-            type="danger"
-            className="mb-2"
-            block
-            shape="round"
-            icon={<GoogleOutlined />}
-            size="large"
-          >
-           Google تسجيل الدخول باستخدام 
+            <Button
+              onClick={googleLogin}
+              type="danger"
+              className="mb-2"
+              block
+              shape="round"
+              icon={<GoogleOutlined />}
+              size="large"
+            >
+              Google تسجيل الدخول باستخدام
           </Button>
 
-          <Link to="/forgot/password" className="float-right text-danger">
-            هل نسيت كلمة السر؟
+            <Link to="/forgot/password" className="float-right text-danger">
+              هل نسيت كلمة السر؟
           </Link>
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 };
