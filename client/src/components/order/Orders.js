@@ -35,7 +35,7 @@ const Orders = ({ orders, handleStatusChange }) => {
               {p.product.shipping === "Free" ? (
                 <p>Free</p>
               ) : (
-                <p>5 JD</p>
+                <p>3 JD</p>
               )}
             </td>
           </tr>

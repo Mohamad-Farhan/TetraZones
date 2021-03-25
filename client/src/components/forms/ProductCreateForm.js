@@ -67,7 +67,7 @@ const ProductCreateForm = ({
           onChange={handleChange}
         >
           <option>Please select</option>
-          <option value="5JD">5JD</option>
+          <option value="3JD">3 JD</option>
           <option value="Free">مجاني</option>
         </select>
       </div>

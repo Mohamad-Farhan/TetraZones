@@ -64,13 +64,13 @@ const ProductUpdateForm = ({
       <div className="form-group">
         <label>Shipping</label>
         <select
-          value={shipping === "Free" ? "Free" : "5JD"}
+          value={shipping === "Free" ? "Free" : "3JD"}
           name="shipping"
           className="form-control"
           onChange={handleChange}
         >
           <option value="Free">Free</option>
-          <option value="5JD">5 JD</option>
+          <option value="3JD">3 JD</option>
         </select>
       </div>
 

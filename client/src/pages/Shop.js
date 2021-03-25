@@ -25,12 +25,15 @@ const Shop = () => {
   const [ok, setOk] = useState(false);
   const [categories, setCategories] = useState([]);
   const [categoryIds, setCategoryIds] = useState([]);
+  // eslint-disable-next-line 
   const [star, setStar] = useState("");
   const [subs, setSubs] = useState([]);
+  // eslint-disable-next-line 
   const [sub, setSub] = useState("");
+  // eslint-disable-next-line 
   const [color, setColor] = useState("");
   const [shipping, setShipping] = useState("");
-
+// eslint-disable-next-line 
   let dispatch = useDispatch();
   let { search } = useSelector((state) => ({ ...state }));
   const { text } = search;
@@ -201,10 +204,10 @@ const Shop = () => {
       <Checkbox
         className="pb-2 pl-4 pr-4"
         onChange={handleShippingchange}
-        value="5JD"
-        checked={shipping === "5JD"}
+        value="3JD"
+        checked={shipping === "3JD"}
       >
-        5JD
+        3JD
       </Checkbox>
     </>
   );

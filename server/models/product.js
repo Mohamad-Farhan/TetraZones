@@ -47,7 +47,7 @@ const productSchema = new mongoose.Schema(
     },
     shipping: {
       type: String,
-      enum: ["Free", "5JD"],
+      enum: ["Free", "3JD"],
     },
     color: {
       type: String,

@@ -102,7 +102,7 @@ const ProductCardInCheckout = ({ p }) => {
           {p.shipping === "Free" ? (
             <p>مجاني</p>
           ) : (
-            <p>5 JD</p>
+            <p>3 JD</p>
           )}
         </td>
         <td className="text-center">

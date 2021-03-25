@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Button, Col, Form } from 'react-bootstrap';
-import { SelectOutlined, UserOutlined } from '@ant-design/icons';
 import Header from '../components/nav/Header';
 import { toast } from "react-toastify";
 import {
@@ -18,37 +17,11 @@ import {
 } from "../functions/user";
 import "react-quill/dist/quill.snow.css";
 
-const { Option } = SelectOutlined;
-
-const provinceData =
-  ['none', 'Zarqa', 'Irbid', 'Amman',
-    'ar-Rusaifa	', 'al-Quwaisima',
-    'Wadi as-Sir', 'Tila al-Ali',
-    'Churaibat as-Suq', 'Aqaba',
-    'as-Salt', 'ar-Ramtha', 'Madaba',
-    'al-Dschubaiha', 'Baqaa refugee camp',
-    'Suwailih', 'al-Mafraq', 'Sahab', 'Muchayyam Hetten',
-    'Jerash', 'Maan', 'al-Karak'
-  ]
-
-const cityData = {
-  Amman: ['Amman', 'Zarqa', 'Irbid',
-    'ar-Rusaifa	', 'al-Quwaisima',
-    'Wadi as-Sir', 'Tila al-Ali',
-    'Churaibat as-Suq', 'Aqaba',
-    'as-Salt', 'ar-Ramtha', 'Madaba',
-    'al-Dschubaiha', 'Baqaa refugee camp',
-    'Suwailih', 'al-Mafraq', 'Sahab', 'Muchayyam Hetten',
-    'Jerash', 'Maan', 'al-Karak'
-  ]
-};
-
-
 const Checkout = ({ history }) => {
   const [products, setProducts] = useState([]);
   const [total, setTotal] = useState(0);
   const [address, setAddress] = useState("");
-  const [city, setCity] = useState(cityData[provinceData[0]]);
+  const [city, setCity] = useState('');
   const [region, setRegion] = useState("");
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -202,16 +175,9 @@ const Checkout = ({ history }) => {
               <option>عمان</option>
               <option>الزرقاء</option>
               <option>اربد</option>
-              <option>الزرقاء</option>
-              <option>العقبة</option>
               <option>البلقاء</option>
               <option>جرش</option>
-              <option>الطفيلة</option>
               <option>عجلون</option>
-              <option>الكرك</option>
-              <option>مادبا</option>
-              <option>معان</option>
-              <option>المفرق</option>
               <option>...</option>
             </Form.Control>
           </Form.Group>

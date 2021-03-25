@@ -44,7 +44,7 @@ const History = () => {
               {p.product.shipping === "Free" ? (
                 <p>مجاني</p>
               ) : (
-                <p> 5 JD</p>
+                <p> 3 JD</p>
               )}
             </td>
             <td>{p.count}</td>

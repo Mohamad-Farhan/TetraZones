@@ -6,11 +6,16 @@ const ShowPaymentInfo = ({ order, showStatus = true }) => (
       <span><b> {order._id} :رقم الطلب</b></span>
       <br />
       <span>
-         {new Date(order.paymentIntent.created).toLocaleString()} :تاريخ الطلب
+        {new Date(order.paymentIntent.created).toLocaleString()} :تاريخ الطلب
       </span>
       <br />
       <span>
-      طريقةالدفع: الدفع عند التوصيل 
+       {(order.paymentIntent.amount /= 100).toLocaleString("en-US")} JD المبلغ كامل
+       
+      </span>
+      <br />
+      <span>
+        طريقةالدفع: الدفع عند التوصيل
       </span>
       <br />
       {showStatus && (
