@@ -50,10 +50,8 @@ const productSchema = new mongoose.Schema(
       enum: ["Free", "3JD"],
     },
     color: {
-      type: String,
-      required: true,
-      maxlength: 2000,
-      text: true,
+      type: ObjectId,
+      ref: "Color",
     },
     brand: {
       type: String,
