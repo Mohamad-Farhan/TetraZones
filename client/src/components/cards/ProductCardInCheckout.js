@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { CloseOutlined } from "@ant-design/icons";
 
-const colors = []
+// const colors = []
 
 const ProductCardInCheckout = ({ p }) => {
   let dispatch = useDispatch();
@@ -39,34 +39,34 @@ const ProductCardInCheckout = ({ p }) => {
     }
   };
 
-  const handleColorChange = (e) => {
-    let color = e.target.value;
+  // const handleColorChange = (e) => {
+  //   let color = e.target.value;
 
-    if (color == colors) {
-      toast.error(`No color ${p.color}`);
-      return;
-    }
+  //   if (color == colors) {
+  //     toast.error(`No color ${p.color}`);
+  //     return;
+  //   }
 
-    let cart = [];
+  //   let cart = [];
 
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("cart")) {
-        cart = JSON.parse(localStorage.getItem("cart"));
-      }
+  //   if (typeof window !== "undefined") {
+  //     if (localStorage.getItem("cart")) {
+  //       cart = JSON.parse(localStorage.getItem("cart"));
+  //     }
 
-      cart.map((product, i) => {
-        if (product._id == p._id) {
-          cart[i].color = color;
-        }
-      });
+  //     cart.map((product, i) => {
+  //       if (product._id == p._id) {
+  //         cart[i].color = color;
+  //       }
+  //     });
 
-      localStorage.setItem("cart", JSON.stringify(cart));
-      dispatch({
-        type: "ADD_TO_CART",
-        payload: cart,
-      });
-    }
-  };
+  //     localStorage.setItem("cart", JSON.stringify(cart));
+  //     dispatch({
+  //       type: "ADD_TO_CART",
+  //       payload: cart,
+  //     });
+  //   }
+  // };
 
   const handleRemove = () => {
     let cart = [];
@@ -113,14 +113,14 @@ const ProductCardInCheckout = ({ p }) => {
             onChange={handleQuantityChange}
           />
         </td>
-        <td>
+        {/* <td>
           <input
             type="text"
             className="form-control"
             value={p.color}
             onChange={handleColorChange}
           />
-        </td>
+        </td> */}
         <td>{p.brand}</td>
         <td>{p.price} JD</td>
         <td>{p.title}</td>

@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { createProduct } from "../../../functions/product";
 import ProductCreateForm from "../../../components/forms/ProductCreateForm";
 import { getCategories, getCategorySubs } from "../../../functions/category";
+import { getColors } from "../../../functions/color";
 import FileUpload from "../../../components/forms/FileUpload";
 import { LoadingOutlined } from "@ant-design/icons";
 import Header from '../../../components/nav/Header';
@@ -19,13 +20,14 @@ const initialState = {
   shipping: "",
   quantity: "",
   images: [],
-  color: "",
+  color: [],
   brand: "",
 };
 
 const ProductCreate = () => {
   const [values, setValues] = useState(initialState);
   const [subOptions, setSubOptions] = useState([]);
+  const [colorOptions, setColorOptions] = useState([]);
   const [showSub, setShowSub] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -63,6 +65,9 @@ const ProductCreate = () => {
     getCategorySubs(e.target.value).then((res) => {
       setSubOptions(res.data);
     });
+    getColors(e.target.value).then((res) => {
+      setColorOptions(res.data);
+    });
     setShowSub(true);
   };
 
@@ -96,6 +101,7 @@ const ProductCreate = () => {
               values={values}
               handleCatagoryChange={handleCatagoryChange}
               subOptions={subOptions}
+              colorOptions={colorOptions}
               showSub={showSub}
             />
           </div>

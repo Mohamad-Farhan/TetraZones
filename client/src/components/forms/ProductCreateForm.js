@@ -10,6 +10,7 @@ const ProductCreateForm = ({
   values,
   handleCatagoryChange,
   subOptions,
+  colorOptions,
   showSub,
 }) => {
   // destructure
@@ -83,27 +84,6 @@ const ProductCreateForm = ({
         />
       </div>
       <div className="form-group">
-        <label>Color</label>
-        <input
-          type="text"
-          name="color"
-          className="form-control"
-          value={colors}
-          onChange={handleChange}
-        />
-      </div>
-      <div className="form-group">
-        <label>Brand</label>
-        <input
-          type="text"
-          name="brand"
-          className="form-control"
-          value={brands}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="form-group">
         <label>Category</label>
         <select
           name="category"
@@ -118,6 +98,35 @@ const ProductCreateForm = ({
               </option>
             ))}
         </select>
+      </div>
+
+      <div>
+        <label>Color</label>
+        <Select
+          mode="multiple"
+          style={{ width: "100%" }}
+          placeholder="Please select"
+          value={colors}
+          onChange={(value) => setValues({ ...values, colors: value })}
+        >
+          {colorOptions.length &&
+            colorOptions.map((q) => (
+              <Option key={q._id} value={q._id}>
+                {q.name}
+              </Option>
+            ))}
+        </Select>
+      </div>
+
+      <div className="form-group">
+        <label>Brand</label>
+        <input
+          type="text"
+          name="brand"
+          className="form-control"
+          value={brands}
+          onChange={handleChange}
+        />
       </div>
 
       {showSub && (

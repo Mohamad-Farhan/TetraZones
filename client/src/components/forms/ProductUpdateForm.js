@@ -12,6 +12,9 @@ const ProductUpdateForm = ({
   subOptions,
   arrayOfSubs,
   setArrayOfSubs,
+  colorsOptions,
+  arrayOfColors,
+  setArrayOfColors,
   selectedCategory,
 }) => {
   // destructure
@@ -81,28 +84,6 @@ const ProductUpdateForm = ({
           name="quantity"
           className="form-control"
           value={quantity}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="form-group">
-        <label>Color</label>
-        <input
-          type="text"
-          name="description"
-          className="form-control"
-          value={color}
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="form-group">
-        <label>Brand</label>
-        <input
-          type="text"
-          name="description"
-          className="form-control"
-          value={brand}
           onChange={handleChange}
         />
       </div>

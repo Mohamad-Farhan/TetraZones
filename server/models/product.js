@@ -49,10 +49,12 @@ const productSchema = new mongoose.Schema(
       type: String,
       enum: ["Free", "3JD"],
     },
-    color: {
-      type: ObjectId,
-      ref: "Color",
-    },
+    colors: [
+      {
+        type: ObjectId,
+        ref: "Color",
+      }
+    ],
     brand: {
       type: String,
       required: true,

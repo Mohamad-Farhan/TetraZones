@@ -33,6 +33,12 @@ const UserDetails = lazy(() => import("./components/order/UserDetails"));
 const CategoryCreate = lazy(() =>
   import("./pages/admin/category/CategoryCreate")
 );
+const ColorUpdate = lazy(() =>
+  import("./pages/admin/color/ColorUpdate")
+);
+const ColorCreate = lazy(() =>
+  import("./pages/admin/color/ColorCreate")
+);
 const CategoryUpdate = lazy(() =>
   import("./pages/admin/category/CategoryUpdate")
 );
@@ -111,10 +117,16 @@ const App = () => {
         <SallerRoute exact path="/saller/history" component={SallerHistory} />
         <AdminRoute exact path="/admin/details" component={UserDetails} />
         <AdminRoute exact path="/admin/category" component={CategoryCreate} />
+        <AdminRoute exact path="/admin/color" component={ColorCreate} />
         <AdminRoute
           exact
           path="/admin/category/:slug"
           component={CategoryUpdate}
+        />
+        <AdminRoute
+          exact
+          path="/admin/color/:slug"
+          component={ColorUpdate}
         />
         <AdminRoute exact path="/admin/sub" component={SubCreate} />
         <AdminRoute exact path="/admin/sub/:slug" component={SubUpdate} />

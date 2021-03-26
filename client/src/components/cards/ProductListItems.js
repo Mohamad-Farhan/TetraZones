@@ -7,7 +7,7 @@ const ProductListItems = ({ product }) => {
     category,
     subs,
     shipping,
-    color,
+    colors,
     brand,
     quantity,
     // sold,
@@ -42,7 +42,7 @@ const ProductListItems = ({ product }) => {
               to={`/sub/${s.slug}`}
               className="label label-default label-pill pull-xs-left"
             >
-              {s.name}
+              <p>{s.name}</p>
             </Link>
           ))}
           <p className="label label-default label-pill pull-xs-right">القسم الفرعي</p>
@@ -56,12 +56,19 @@ const ProductListItems = ({ product }) => {
         <p className="label label-default label-pill pull-xs-right">{" "}التوصيل</p>
       </li>
 
-      <li className="list-group-item">
-        <span className="label label-default label-pill pull-xs-left">
-          {color}
-        </span>
-        <p className="label label-default label-pill pull-xs-right">{" "}اللون</p>
-      </li>
+      {colors && (
+        <li className="list-group-item">
+          {colors.map((c) => (
+            <p
+              key={c._id}
+              className="label label-default label-pill pull-xs-left"
+            >
+              <p>{c.name}</p>
+            </p>
+          ))}
+          <p className="label label-default label-pill pull-xs-right">اللون </p>
+        </li>
+      )}
 
       <li className="list-group-item">
         <span className="label label-default label-pill pull-xs-left">

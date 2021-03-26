@@ -16,6 +16,12 @@ const SallerNav = () => (
             </li>
 
             <li className="nav-item">
+                <Link to="/saller/color" className="nav-link">
+                    اضف لون
+        </Link>
+            </li>
+
+            <li className="nav-item">
                 <Link to="/user/password" className="nav-link">
                     تغير كلمة السر
         </Link>

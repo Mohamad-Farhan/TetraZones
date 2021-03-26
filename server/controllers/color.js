@@ -12,7 +12,7 @@ exports.create = async (req, res) => {
 };
 
 exports.list = async (req, res) =>
-    res.json(await Category.find({}).sort({ createdAt: -1 }).exec());
+    res.json(await Color.find({}).sort({ createdAt: -1 }).exec());
 
 exports.read = async (req, res) => {
     let color = await Color.findOne({ slug: req.params.slug }).exec();
