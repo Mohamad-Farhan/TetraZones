@@ -21,7 +21,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
   const [tooltip, setTooltip] = useState("Click to add");
 
   // redux
-  const { user, cart } = useSelector((state) => ({ ...state }));
+  const { user } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
   // router
   let history = useHistory();
@@ -109,8 +109,8 @@ const SingleProduct = ({ product, onStarClick, star }) => {
       </div>
       <div className="col-md-7">
         {images && images.length ? (
-          <Carousel showArrows={true} autoPlay infiniteLoop>
-            {images && images.map((i) => <img src={i.url} key={i.public_id} />)}
+          <Carousel showArrows={true} infiniteLoop>
+            {images && images.map((i) => <img src={i.url} key={i.public_id} className='float-right'/>)}
           </Carousel>
         ) : (
           <Card cover={<img src={Laptop} className="mb-3 card-image" />}></Card>

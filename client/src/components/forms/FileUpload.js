@@ -17,10 +17,10 @@ const FileUpload = ({ values, setValues, setLoading }) => {
       for (let i = 0; i < files.length; i++) {
         Resizer.imageFileResizer(
           files[i],
-          720,
-          720,
+          1200,
+          1200,
           "JPEG",
-          100,
+          150,
           0,
           (uri) => {
             axios
@@ -34,7 +34,6 @@ const FileUpload = ({ values, setValues, setLoading }) => {
                 }
               )
               .then((res) => {
-                console.log("IMAGE UPLOAD RES DATA", res);
                 setLoading(false);
                 allUploadedFiles.push(res.data);
 
