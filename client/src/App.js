@@ -92,9 +92,9 @@ const App = () => {
     <Suspense
       fallback={
         <div className="col text-center p-5">
-          __ Tetra
+          __ Hamude
           <LoadingOutlined />
-          Zone __
+          Store __
         </div>
       }
     >
