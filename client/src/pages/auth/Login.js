@@ -107,7 +107,7 @@ const Login = ({ history }) => {
           className="form-control text-right"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="ادخل الاميل"
+          placeholder="ادخل الايميل"
           autoFocus
         />
       </div>
@@ -131,7 +131,7 @@ const Login = ({ history }) => {
         shape="round"
         icon={<MailOutlined />}
         size="large"
-        // disabled={!email || password.length < 6}
+        disabled={!email || password.length < 6}
       >
         تسجيل الدخول باستخدام الاميل
       </Button>
@@ -147,7 +147,7 @@ const Login = ({ history }) => {
             {loading ? (
               <h4 className="text-danger">Loading...</h4>
             ) : (
-              <h4>تسجيل الدخول</h4>
+              <h4 className='text-right'>تسجيل الدخول</h4>
             )}
             {loginForm()}
 

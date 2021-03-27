@@ -46,6 +46,8 @@ const SubCreate = lazy(() => import("./pages/admin/sub/SubCreate"));
 const SubUpdate = lazy(() => import("./pages/admin/sub/SubUpdate"));
 const ProductCreate = lazy(() => import("./pages/admin/product/ProductCreate"));
 const SallerProductCreate = lazy(() => import("./pages/saller/product/SallerProductCreate"));
+const SallerColorCreate = lazy(() => import("./pages/saller/color/ColorCreate"));
+const SallerColorUpdate = lazy(() => import("./pages/saller/color/ColorUpdate"));
 const AllProducts = lazy(() => import("./pages/admin/product/AllProducts"));
 const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
 const Product = lazy(() => import("./pages/Product"));
@@ -115,6 +117,10 @@ const App = () => {
         <SallerRoute exact path="/saller/password" component={SallerPassword} />
         <SallerRoute exact path="/saller/wishlist" component={SallerWishlist} />
         <SallerRoute exact path="/saller/history" component={SallerHistory} />
+        <SallerRoute exact path="/saller/color" component={SallerColorCreate} />
+        <SallerRoute exact
+          path="/saller/color/:slug"
+          component={SallerColorUpdate} />
         <AdminRoute exact path="/admin/details" component={UserDetails} />
         <AdminRoute exact path="/admin/category" component={CategoryCreate} />
         <AdminRoute exact path="/admin/color" component={ColorCreate} />

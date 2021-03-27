@@ -26,3 +26,10 @@ export const createColor = async (color, authtoken) =>
             authtoken,
         },
     });
+
+export const createSallerColor = async (color, authtoken) =>
+    await axios.post(`${process.env.REACT_APP_API}/saller/color`, color, {
+        headers: {
+            authtoken,
+        },
+    });

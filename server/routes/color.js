@@ -15,7 +15,7 @@ const {
 
 // routes
 router.post("/color", authCheck, adminCheck, create);
-router.post("/color", authCheck, sallerCheck, create);
+router.post("/saller/color", authCheck, sallerCheck, create);
 router.get("/colors", list);
 router.get("/color/:slug", read);
 router.put("/color/:slug", authCheck, adminCheck, update);

@@ -53,7 +53,7 @@ const ForgotPassword = ({ history }) => {
           className="form-control text-right"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="ادخل الأميل"
+          placeholder="ادخل الأيميل"
           autoFocus
         />
         <br />
