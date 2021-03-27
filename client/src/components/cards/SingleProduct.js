@@ -118,7 +118,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
 
         <Tabs type="card">
           <TabPane tab="تفاصيل المنتج" key="1" className='text-right'>
-            {description && description}
+            <div>{description && description}</div>
           </TabPane>
           <TabPane tab="أخرى" key="2" className='text-right'>
             التواصل على الواتس على الرقم التالي 0785836823 لمعرفة المزيد عن المنتج
