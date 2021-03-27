@@ -14,15 +14,15 @@ const Home = () => {
     <>
       <Header />
       <div className="text-center">
-        <AliceCarousel autoPlay disableButtonsControls infinite autoPlayInterval='3000'>
-          <Link to="/category/mlbs">
-            <img src={cover} className="sliderimg img-fluid" alt="Responsive image" style={{ width: 1400 }} />
+        <AliceCarousel autoPlay disableButtonsControls infinite autoPlayInterval='4000'>
+          <Link to="//category/dotlmnzly">
+            <img src={cover} className="sliderimg img-fluid" alt="Responsive image" />
           </Link>
           <Link to='/shop'>
-            <img src={cover} className=" sliderimg img-fluid" alt="Responsive image" style={{ width: 1400 }} />
+            <img src={cover} className=" sliderimg img-fluid" alt="Responsive image"/>
           </Link>
           <Link to='/shop'>
-            <img src={cover} className=" sliderimg img-fluid" alt="Responsive image" style={{ width: 1400 }} />
+            <img src={cover} className=" sliderimg img-fluid" alt="Responsive image"/>
           </Link>
         </AliceCarousel>
       </div>

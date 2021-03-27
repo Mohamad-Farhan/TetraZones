@@ -39,12 +39,12 @@ const Help = () => {
                     <div className='card'>
                         <div className='card-header'>
                             <h4 className='collapsed card-link text-right'>
-                                هل يمكنني ان استبدل المنتجات؟
+                                هل يمكنني استبدال المنتجات؟
                             </h4>
                         </div>
                         <div>
                             <h6 className='card-body text-right'>
-                                .ليس جميع المنتجات ولكن يمكنك ترجيع بعض المنتجات عند التسليم اذا كان فيها اي خلل
+                                .ليس جميع المنتجات ولكن يمكنك ارجاع بعض المنتجات عند التسليم اذا كان فيها اي خلل
                             </h6>
                         </div>
                     </div>
