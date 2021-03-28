@@ -28,7 +28,7 @@ const ProductCreateForm = ({
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <label>Title</label>
+        <label className='float-right'>الاسم</label>
         <input
           type="text"
           name="title"
@@ -39,7 +39,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Description</label>
+        <label className='float-right'>وصف</label>
         <textarea
           type="text"
           name="description"
@@ -50,7 +50,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Price</label>
+        <label className='float-right'>سعر</label>
         <input
           type="number"
           name="price"
@@ -61,7 +61,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Shipping</label>
+        <label className='float-right'>التوصيل</label>
         <select
           name="shipping"
           className="form-control"
@@ -74,7 +74,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Quantity</label>
+        <label className='float-right'>كمية المنتج</label>
         <input
           type="number"
           name="quantity"
@@ -84,7 +84,7 @@ const ProductCreateForm = ({
         />
       </div>
       <div className="form-group">
-        <label>Category</label>
+        <label className='float-right'>القسم</label>
         <select
           name="category"
           className="form-control"
@@ -101,7 +101,7 @@ const ProductCreateForm = ({
       </div>
 
       <div>
-        <label>Color</label>
+        <label className='float-right'>اللون</label>
         <Select
           mode="multiple"
           style={{ width: "100%" }}
@@ -119,7 +119,7 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Brand</label>
+        <label className='float-right'>الماركة</label>
         <input
           type="text"
           name="brand"
@@ -131,7 +131,7 @@ const ProductCreateForm = ({
 
       {showSub && (
         <div>
-          <label>Sub Categories</label>
+          <label className='float-right'>الاقسام الفرعية</label>
           <Select
             mode="multiple"
             style={{ width: "100%" }}
@@ -150,7 +150,7 @@ const ProductCreateForm = ({
       )}
 
       <br />
-      <button className="btn btn-outline-info">Save</button>
+      <button className="btn btn-outline-info">حفظ</button>
     </form>
   );
 };

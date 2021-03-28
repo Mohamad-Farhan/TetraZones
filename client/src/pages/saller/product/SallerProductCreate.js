@@ -76,15 +76,11 @@ const ProductCreate = () => {
             <Header />
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-2">
-                        <SallerNav />
-                    </div>
-
                     <div className="col-md-10">
                         {loading ? (
                             <LoadingOutlined className="text-danger h1" />
                         ) : (
-                            <h4>Product create</h4>
+                            <h4 className='text-right'>  اضف منتج</h4>
                         )}
                         <hr />
                         <div className="p-3">
@@ -104,6 +100,10 @@ const ProductCreate = () => {
                             colorOptions={colorOptions}
                             showSub={showSub}
                         />
+                    </div>
+
+                    <div className="col-md-2">
+                        <SallerNav/>
                     </div>
                 </div>
             </div>

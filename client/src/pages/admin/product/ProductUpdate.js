@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { getProduct, updateProduct } from "../../../functions/product";
 import { getCategories, getCategorySubs } from "../../../functions/category";
+import { getColors } from "../../../functions/color";
 import FileUpload from "../../../components/forms/FileUpload";
 import { LoadingOutlined } from "@ant-design/icons";
 import ProductUpdateForm from "../../../components/forms/ProductUpdateForm";
@@ -18,7 +19,7 @@ const initialState = {
   shipping: "",
   quantity: "",
   images: [],
-  color: "",
+  color: [],
   brand: "",
 };
 
@@ -27,6 +28,7 @@ const ProductUpdate = ({ match, history }) => {
   const [values, setValues] = useState(initialState);
   const [categories, setCategories] = useState([]);
   const [subOptions, setSubOptions] = useState([]);
+  const [colorOptions, setColorOptions] = useState([]);
   const [arrayOfSubs, setArrayOfSubs] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [loading, setLoading] = useState(false);
@@ -97,6 +99,9 @@ const ProductUpdate = ({ match, history }) => {
     getCategorySubs(e.target.value).then((res) => {
       setSubOptions(res.data);
     });
+    getColors(e.target.value).then((res) => {
+      setColorOptions(res.data);
+    });
 
     // if user clicks back to the original category
     // show its sub categories in default
@@ -139,6 +144,7 @@ const ProductUpdate = ({ match, history }) => {
               handleCategoryChange={handleCategoryChange}
               categories={categories}
               subOptions={subOptions}
+              colorOptions={colorOptions}
               arrayOfSubs={arrayOfSubs}
               setArrayOfSubs={setArrayOfSubs}
               selectedCategory={selectedCategory}
