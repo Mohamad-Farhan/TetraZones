@@ -5,7 +5,7 @@ import CategoryList from "../components/category/CategoryList";
 import SubList from "../components/sub/SubList";
 import cover from '../images/cover.png';
 import cover2 from '../images/Cover2.png';
-
+import { MessageOutlined, WechatOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 import Header from '../components/nav/Header';
 import AliceCarousel from 'react-alice-carousel';
@@ -15,16 +15,19 @@ const Home = () => {
   return (
     <>
       <Header />
+      <a href='https://wa.me/+962785836823'>
+      <WechatOutlined className='fixed-bottom text-right' style={{ fontSize: 80, color: 'green'}}/>
+      </a>
       <div className="text-center">
         <AliceCarousel autoPlay disableButtonsControls infinite autoPlayInterval='4000'>
           <Link to="/shop">
-            <img src={cover} className="sliderimg img-fluid" alt='jsx-a11y/alt-text'/>
+            <img src={cover} className="sliderimg img-fluid" alt='jsx-a11y/alt-text' />
           </Link>
           <Link to='/category/dotlmnzly'>
-            <img src={cover2} className=" sliderimg img-fluid" alt='jsx-a11y/alt-text'/>
+            <img src={cover2} className=" sliderimg img-fluid" alt='jsx-a11y/alt-text' />
           </Link>
           <Link to='/shop'>
-            <img src={cover2} className=" sliderimg img-fluid" alt='jsx-a11y/alt-text'/>
+            <img src={cover2} className=" sliderimg img-fluid" alt='jsx-a11y/alt-text' />
           </Link>
         </AliceCarousel>
       </div>
