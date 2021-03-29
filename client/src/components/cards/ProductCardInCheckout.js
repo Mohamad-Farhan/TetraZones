@@ -6,9 +6,11 @@ import { toast } from "react-toastify";
 import { CloseOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-const colors = []
 
 const ProductCardInCheckout = ({ p }) => {
+
+  const colors = p.colors
+
   let dispatch = useDispatch();
 
   const handleQuantityChange = (e) => {
@@ -115,12 +117,19 @@ const ProductCardInCheckout = ({ p }) => {
           />
         </td>
         <td>
-          <input
-            type="text"
+          <select
+            name="category"
             className="form-control"
-            value={p.color}
             onChange={handleColorChange}
-          />
+          >
+            <option>Please select</option>
+            {colors.length > 0 &&
+              colors.map((c) => (
+                <option key={c.name} value={c.name}>
+                  {c.name}
+                </option>
+              ))}
+          </select>
         </td>
         <td>{p.brand}</td>
         <td>{p.price} JD</td>

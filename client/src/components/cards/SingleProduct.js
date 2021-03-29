@@ -123,9 +123,6 @@ const SingleProduct = ({ product, onStarClick, star }) => {
           <TabPane tab="أخرى" key="2" className='text-right'>
             التواصل على الواتس على الرقم التالي 0785836823 لمعرفة المزيد عن المنتج
           </TabPane>
-          <TabPane tab="التعليقات" key="3" className='text-right'>
-            فارغ
-          </TabPane>
         </Tabs>
       </div>
     </>

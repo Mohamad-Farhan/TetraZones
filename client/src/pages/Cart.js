@@ -15,6 +15,8 @@ const Cart = ({ history }) => {
     }, 0);
   };
 
+
+
   const saveCashOrderToDb = () => {
     dispatch({
       type: "COD",
@@ -58,6 +60,7 @@ const Cart = ({ history }) => {
             <h4>السلة</h4>
             <hr />
             <p>المنتجات</p>
+            <p>يضاف 3 دنانير توصيل</p>
             {cart.map((c, i) => (
               <div key={i}>
                 <p>
@@ -66,7 +69,7 @@ const Cart = ({ history }) => {
               </div>
             ))}
             <hr />
-            <b>{getTotal()} JD </b> :السعر الكامل
+            <b>{getTotal() + 3} JD </b> :السعر الكامل
           <hr />
             {user ? (
               <>
@@ -75,7 +78,7 @@ const Cart = ({ history }) => {
                   className="btn btn-sm btn-warning mt-2"
                   disabled={!cart.length}
                 >
-                   شراء 
+                  شراء
               </button>
               </>
             ) : (

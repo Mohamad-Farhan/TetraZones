@@ -57,33 +57,35 @@ const ProductCard = ({ product }) => {
       ) : (
         <div className="text-center pt-1 pb-3">لايوجد تقيم بعد</div>
       )}
-
       <Card
         cover={
-          <img
-            alt='jsx-a11y/img-redundant-alt'
-            src={images && images.length ? images[0].url : laptop}
-            style={{ height: "150px", objectFit: "cover" }}
-            className="p-1"
-          />
+            <img
+              src={images && images.length ? images[0].url : laptop}
+              style={{ height: "150px", objectFit: "cover" }}
+              className="p-1"
+              
+            />
         }
         actions={[
           <Link to={`/product/${slug}`}>
             <EyeOutlined className="text-warning" /> <br /> عرض المنتج
           </Link>,
           <Tooltip title={tooltip}>
-            <a onClick={handleAddToCart} disabled={product.quantity < 1} href='jsx-a11y/anchor-is-valid'>
+            <a onClick={handleAddToCart} disabled={product.quantity < 1}>
               <ShoppingCartOutlined className="text-danger" /> <br />
               {product.quantity < 1 ? "انتهى المنتج" : "اضف الى السلة"}
             </a>
           </Tooltip>,
         ]}
       >
-        <Meta
-          title={`${title} - ${price} JD`}
-          description={`${description && description.substring(0, 40)}...`}
-        />
+        <Link to={`/product/${slug}`}>
+          <Meta
+            title={`${title} - ${price} JD`}
+            description={`${description && description.substring(0, 40)}...`}
+          />
+        </Link>
       </Card>
+
     </>
   );
 };
