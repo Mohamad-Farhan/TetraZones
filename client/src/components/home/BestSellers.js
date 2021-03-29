@@ -12,10 +12,12 @@ const BestSellers = () => {
 
   useEffect(() => {
     loadAllProducts();
+    // eslint-disable-next-line
   }, [page]);
 
   useEffect(() => {
     getProductsCount().then((res) => setProductsCount(res.data));
+    // eslint-disable-next-line
   }, []);
 
   const loadAllProducts = () => {

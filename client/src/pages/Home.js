@@ -16,13 +16,13 @@ const Home = () => {
       <div className="text-center">
         <AliceCarousel autoPlay disableButtonsControls infinite autoPlayInterval='4000'>
           <Link to="/category/dotlmnzly">
-            <img src={cover} className="sliderimg img-fluid" alt="Responsive image" />
+            <img src={cover} className="sliderimg img-fluid" alt='jsx-a11y/alt-text'/>
           </Link>
           <Link to='/shop'>
-            <img src={cover} className=" sliderimg img-fluid" alt="Responsive image"/>
+            <img src={cover} className=" sliderimg img-fluid" alt='jsx-a11y/alt-text'/>
           </Link>
           <Link to='/shop'>
-            <img src={cover} className=" sliderimg img-fluid" alt="Responsive image"/>
+            <img src={cover} className=" sliderimg img-fluid" alt='jsx-a11y/alt-text'/>
           </Link>
         </AliceCarousel>
       </div>

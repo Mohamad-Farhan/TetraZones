@@ -1,5 +1,4 @@
 import React from "react";
-import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import ShowPaymentInfo from "../cards/ShowPaymentInfo";
 import { Link } from "react-router-dom";
 

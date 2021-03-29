@@ -75,6 +75,7 @@ const Shop = () => {
   // 3. load products based on price range
   useEffect(() => {
     fetchProducts({ price });
+    // eslint-disable-next-line
   }, [ok]);
 
   const handleSlider = (value) => {

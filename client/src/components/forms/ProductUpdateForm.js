@@ -12,9 +12,6 @@ const ProductUpdateForm = ({
   subOptions,
   arrayOfSubs,
   setArrayOfSubs,
-  colorsOptions,
-  arrayOfColors,
-  setArrayOfColors,
   selectedCategory,
 }) => {
   // destructure
@@ -25,8 +22,6 @@ const ProductUpdateForm = ({
     category,
     shipping,
     quantity,
-    color,
-    brand,
   } = values;
 
   return (

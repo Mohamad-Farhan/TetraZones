@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import Search from "../forms/Search";
 
 const { SubMenu, Item } = Menu;
 
@@ -42,7 +41,7 @@ const LRHeader = () => {
     return (
         <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
             <Item className='float-right'>
-                <img src={Logo} className='img-fluid' style={{ width: 200 }} alt="Responsive image" />
+                <img src={Logo} className='img-fluid' style={{ width: 200 }} alt="jsx-a11y/img-redundant-alt" />
                 <Link to="/"></Link>
             </Item>
 

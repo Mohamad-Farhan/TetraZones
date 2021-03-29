@@ -53,9 +53,7 @@ const ProductUpdate = ({ match, history }) => {
       });
       // 3 prepare array of sub ids to show as default sub values in antd Select
       let arr = [];
-      p.data.subs.map((s) => {
-        arr.push(s._id);
-      });
+      p.data.subs.map((s) =>  arr.push(s._id));
       // eslint-disable-next-line
       setArrayOfSubs((prev) => arr); // required for ant design select to work
     });

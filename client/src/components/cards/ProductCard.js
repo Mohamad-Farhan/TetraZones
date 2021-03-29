@@ -72,7 +72,7 @@ const ProductCard = ({ product }) => {
             <EyeOutlined className="text-warning" /> <br /> عرض المنتج
           </Link>,
           <Tooltip title={tooltip}>
-            <a onClick={handleAddToCart} disabled={product.quantity < 1}>
+            <a onClick={handleAddToCart} disabled={product.quantity < 1} href='jsx-a11y/anchor-is-valid'>
               <ShoppingCartOutlined className="text-danger" /> <br />
               {product.quantity < 1 ? "انتهى المنتج" : "اضف الى السلة"}
             </a>

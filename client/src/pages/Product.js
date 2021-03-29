@@ -17,6 +17,7 @@ const Product = ({ match }) => {
 
   useEffect(() => {
     loadSingleProduct();
+    // eslint-disable-next-line
   }, [slug]);
 
   useEffect(() => {
@@ -26,7 +27,8 @@ const Product = ({ match }) => {
       );
       existingRatingObject && setStar(existingRatingObject.star); // current user's star
     }
-  });
+    // eslint-disable-next-line
+  },[]);
 
   const loadSingleProduct = () => {
     getProduct(slug).then((res) => {

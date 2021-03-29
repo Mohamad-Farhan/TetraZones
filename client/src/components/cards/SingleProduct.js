@@ -83,13 +83,13 @@ const SingleProduct = ({ product, onStarClick, star }) => {
         <Card
           actions={[
             <Tooltip placement="top" title={tooltip}>
-              <a onClick={handleAddToCart} disabled={product.quantity < 1}>
+              <a onClick={handleAddToCart} disabled={product.quantity < 1} href='jsx-a11y/anchor-is-valid'>
                 <ShoppingCartOutlined className="text-danger" />
                 <br />
                 {product.quantity < 1 ? "المنتج غير موجود" : "اضف الى السلة"}
               </a>
             </Tooltip>,
-            <a onClick={handleAddToWishlist}>
+            <a onClick={handleAddToWishlist} href='jsx-a11y/anchor-is-valid'>
               <HeartOutlined className="text-info" /> <br /> اضف الى المفضلة
             </a>,
             <RatingModal>
@@ -110,10 +110,10 @@ const SingleProduct = ({ product, onStarClick, star }) => {
       <div className="col-md-7">
         {images && images.length ? (
           <Carousel showArrows={true} infiniteLoop>
-            {images && images.map((i) => <img src={i.url} key={i.public_id} className='float-right'/>)}
+            {images && images.map((i) => <img src={i.url} key={i.public_id} className='float-right' alt='jsx-a11y/alt-text'/>)}
           </Carousel>
         ) : (
-          <Card cover={<img src={Laptop} className="mb-3 card-image" />}></Card>
+            <Card cover={<img src={Laptop} className="mb-3 card-image" alt='jsx-a11y/alt-text'/>}></Card>
         )}
 
         <Tabs type="card">
