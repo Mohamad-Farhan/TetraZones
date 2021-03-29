@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const UserNav = () => (
   <nav>
-    <ul className="nav flex-column float-right">
+    <ul className="nav flex-column">
       <li className="nav-item">
         <Link to="/user/history" className="nav-link">
           عمليات الشراء

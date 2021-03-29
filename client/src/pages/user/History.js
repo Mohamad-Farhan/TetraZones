@@ -69,16 +69,16 @@ const History = () => {
       <Header />
       <div className="container-fluid">
         <div className="row">
+
+          <div className="col-sm-0 mt-4">
+            <UserNav />
+          </div>
           <div className="col text-center mt-4">
             <h4>
               {orders.length > 0 ? "علميات الشراء التي قمت بها" : "لايوجد عمليات شراء"}
             </h4>
             {showEachOrders()}
           </div>
-          <div className="col-sm-0 mt-4">
-            <UserNav />
-          </div>
-
         </div>
       </div>
     </>
