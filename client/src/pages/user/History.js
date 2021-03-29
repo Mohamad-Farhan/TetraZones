@@ -28,10 +28,10 @@ const History = () => {
     <table className="table table-bordered">
       <thead className="thead-light">
         <tr>
-          <th scope="col">التوصيل</th>
+          {/* <th scope="col">التوصيل</th> */}
           <th scope="col">العدد</th>
           <th scope="col">اللون</th>
-          <th scope="col">الماركة</th>
+          {/* <th scope="col">الماركة</th> */}
           <th scope="col">السعر</th>
           <th scope="col">الاسم</th>
         </tr>
@@ -40,23 +40,14 @@ const History = () => {
       <tbody>
         {order.products.map((p, i) => (
           <tr key={i}>
-            <td>
-              {p.product.shipping === "Free" ? (
-                <p>مجاني</p>
-              ) : (
-                <p> 3 JD</p>
-              )}
-            </td>
             <td>{p.count}</td>
             <td>{p.color}</td>
-            <td>{p.product.brand}</td>
             <td>{p.product.price}</td>
             <td>
               <Link to={`/product/${p.product.slug}`}>
                 <b>{p.product.title}</b>
               </Link>
             </td>
-
           </tr>
         ))}
       </tbody>

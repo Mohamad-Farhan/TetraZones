@@ -15,7 +15,7 @@ const Home = () => {
       <Header />
       <div className="text-center">
         <AliceCarousel autoPlay disableButtonsControls infinite autoPlayInterval='4000'>
-          <Link to="//category/dotlmnzly">
+          <Link to="/category/dotlmnzly">
             <img src={cover} className="sliderimg img-fluid" alt="Responsive image" />
           </Link>
           <Link to='/shop'>

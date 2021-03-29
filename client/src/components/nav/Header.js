@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, Badge } from "antd";
-import Logo from './logo6.png'
+import Logo from './logo.png'
 import {
   AppstoreOutlined,
   SettingOutlined,
