@@ -135,7 +135,7 @@ const Checkout = ({ history }) => {
       <Form>
         <Form.Row >
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label className='float-right'>الاسم الاخير</Form.Label>
+            <Form.Label className='float-right'></Form.Label>
             <Form.Control
               className='text-right'
               value={lastName}
@@ -148,7 +148,7 @@ const Checkout = ({ history }) => {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridEmail" >
-            <Form.Label className='float-right'>الاسم الاول</Form.Label>
+            <Form.Label className='float-right'> </Form.Label>
             <Form.Control
               className='text-right'
               value={firstName}
@@ -198,7 +198,7 @@ const Checkout = ({ history }) => {
 
         <Form.Row >
           <Form.Group as={Col} controlId="formGridEmail" >
-            <Form.Label className='float-right'>اسم الشارع ورقم البناية</Form.Label>
+            <Form.Label className='float-right'></Form.Label>
             <Form.Control
               className='text-right'
               value={address}
@@ -211,7 +211,7 @@ const Checkout = ({ history }) => {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label className='float-right'>المنطقة</Form.Label>
+            <Form.Label className='float-right'></Form.Label>
             <Form.Control
               className='text-right'
               type="password"
