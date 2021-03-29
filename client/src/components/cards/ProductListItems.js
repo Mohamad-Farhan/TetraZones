@@ -19,7 +19,7 @@ const ProductListItems = ({ product }) => {
         <span className="label label-default label-pill pull-xs-left">
           {price} JD
         </span>
-        <p className="label label-default label-pill pull-xs-right">{" "}السعر</p>
+        <div className="label label-default label-pill pull-xs-right">{" "}السعر</div>
       </li>
 
       {category && (
@@ -30,7 +30,7 @@ const ProductListItems = ({ product }) => {
           >
             {category.name}
           </Link>
-          <p className="label label-default label-pill pull-xs-right">القسم</p>
+          <div className="label label-default label-pill pull-xs-right">القسم</div>
         </li>
       )}
 
@@ -42,10 +42,10 @@ const ProductListItems = ({ product }) => {
               to={`/sub/${s.slug}`}
               className="label label-default label-pill pull-xs-left"
             >
-              <p>{s.name}</p>
+              <div>{s.name}</div>
             </Link>
           ))}
-          <p className="label label-default label-pill pull-xs-right">القسم الفرعي</p>
+          <div className="label label-default label-pill pull-xs-right">القسم الفرعي</div>
         </li>
       )}
 
@@ -53,20 +53,20 @@ const ProductListItems = ({ product }) => {
         <span className="label label-default label-pill pull-xs-left">
           {shipping}
         </span>
-        <p className="label label-default label-pill pull-xs-right">{" "}التوصيل</p>
+        <div className="label label-default label-pill pull-xs-right">{" "}التوصيل</div>
       </li>
 
       {colors && (
         <li className="list-group-item">
           {colors.map((c) => (
-            <p
+            <div
               key={c._id}
               className="label label-default label-pill pull-xs-left"
             >
-              <p>{c.name}</p>
-            </p>
+              <div>{c.name}</div>
+            </div>
           ))}
-          <p className="label label-default label-pill pull-xs-right">اللون </p>
+          <div className="label label-default label-pill pull-xs-right">اللون </div>
         </li>
       )}
 
@@ -74,14 +74,14 @@ const ProductListItems = ({ product }) => {
         <span className="label label-default label-pill pull-xs-left">
           {brand}
         </span>
-        <p className="label label-default label-pill pull-xs-right">{" "}الماركة</p>
+        <div className="label label-default label-pill pull-xs-right">{" "}الماركة</div>
       </li>
 
       <li className="list-group-item">
         <span className="label label-default label-pill pull-xs-letf">
           {quantity}
         </span>
-        <p className="label label-default label-pill pull-xs-right">{" "}عدد المنتجات المتاحة</p>
+        <div className="label label-default label-pill pull-xs-right">{" "}عدد المنتجات المتاحة</div>
       </li>
 
       {/* <li className="list-group-item">
