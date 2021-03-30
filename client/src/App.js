@@ -7,7 +7,7 @@ import { auth } from "./firebase";
 import { useDispatch } from "react-redux";
 import { currentUser } from "./functions/auth";
 import { LoadingOutlined } from "@ant-design/icons";
-
+import KomunicateChat from './components/ChatBot';
 // using lazy
 const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
@@ -100,6 +100,7 @@ const App = () => {
         </div>
       }
     >
+      <KomunicateChat/>
       <SideDrawer />
       <ToastContainer />
       <Switch>
