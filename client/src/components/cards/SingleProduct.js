@@ -107,10 +107,10 @@ const SingleProduct = ({ product, onStarClick, star }) => {
           <ProductListItems product={product} />
         </Card>
       </div>
-      <div className="col-md-7">
+      <div className="col-md-5">
         {images && images.length ? (
-          <Carousel showArrows={true} infiniteLoop>
-            {images && images.map((i) => <img src={i.url} key={i.public_id} className='float-right' alt='jsx-a11y/alt-text'/>)}
+          <Carousel showArrows={true} infiniteLoop >
+            {images && images.map((i) => <img src={i.url} key={i.public_id}/>)}
           </Carousel>
         ) : (
             <Card cover={<img src={Laptop} className="mb-3 card-image" alt='jsx-a11y/alt-text'/>}></Card>
