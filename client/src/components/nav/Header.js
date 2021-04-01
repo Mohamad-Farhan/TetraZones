@@ -40,7 +40,7 @@ const Header = () => {
   };
 
   return (
-    <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
+    <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal" className='sticky-top'>
       <Item className='float-right'>
         <img src={Logo} className='img-fluid' style={{ width: 200 }} alt="jsx-a11y/img-redundant-alt" />
         <Link to="/"></Link>
