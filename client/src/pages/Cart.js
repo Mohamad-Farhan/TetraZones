@@ -11,7 +11,7 @@ const Cart = ({ history }) => {
 
   const getTotal = () => {
     return cart.reduce((currentValue, nextValue) => {
-      return currentValue + nextValue.count * nextValue.price;
+      return 3 + currentValue + nextValue.count * nextValue.price;
     }, 0);
   };
 
@@ -69,7 +69,7 @@ const Cart = ({ history }) => {
               </div>
             ))}
             <hr />
-            <b>{getTotal() + 3} JD </b> :السعر الكامل
+            <b>{getTotal()} JD </b> :السعر الكامل
           <hr />
             {user ? (
               <>

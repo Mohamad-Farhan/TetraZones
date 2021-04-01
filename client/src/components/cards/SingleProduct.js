@@ -83,13 +83,13 @@ const SingleProduct = ({ product, onStarClick, star }) => {
         <Card
           actions={[
             <Tooltip placement="top" title={tooltip}>
-              <a onClick={handleAddToCart} disabled={product.quantity < 1} href='jsx-a11y/anchor-is-valid'>
+              <a onClick={handleAddToCart} disabled={product.quantity < 1}>
                 <ShoppingCartOutlined className="text-danger" />
                 <br />
                 {product.quantity < 1 ? "المنتج غير موجود" : "اضف الى السلة"}
               </a>
             </Tooltip>,
-            <a onClick={handleAddToWishlist} href='jsx-a11y/anchor-is-valid'>
+            <a onClick={handleAddToWishlist}>
               <HeartOutlined className="text-info" /> <br /> اضف الى المفضلة
             </a>,
             <RatingModal>
