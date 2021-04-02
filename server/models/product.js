@@ -55,12 +55,12 @@ const productSchema = new mongoose.Schema(
         ref: "Color",
       }
     ],
-    brand: {
-      type: String,
-      required: true,
-      maxlength: 2000,
-      text: true,
-    },
+    brands: [
+      {
+        type: ObjectId,
+        ref: "Brand",
+      }
+    ],
     ratings: [
       {
         star: Number,
