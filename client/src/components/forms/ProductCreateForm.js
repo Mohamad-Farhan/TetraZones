@@ -11,6 +11,7 @@ const ProductCreateForm = ({
   handleCatagoryChange,
   subOptions,
   colorOptions,
+  brandOptions,
   showSub,
 }) => {
   // destructure
@@ -118,15 +119,22 @@ const ProductCreateForm = ({
         </Select>
       </div>
 
-      <div className="form-group">
+      <div>
         <label className='float-right'>الماركة</label>
-        <input
-          type="text"
-          name="brand"
-          className="form-control"
+        <Select
+          mode="multiple"
+          style={{ width: "100%" }}
+          placeholder="Please select"
           value={brands}
-          onChange={handleChange}
-        />
+          onChange={(value) => setValues({ ...values, brands: value })}
+        >
+          {brandOptions.length &&
+            brandOptions.map((b) => (
+              <Option key={b._id} value={b._id}>
+                {b.name}
+              </Option>
+            ))}
+        </Select>
       </div>
 
       {showSub && (

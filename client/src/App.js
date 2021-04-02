@@ -44,6 +44,8 @@ const CategoryUpdate = lazy(() =>
 );
 const SubCreate = lazy(() => import("./pages/admin/sub/SubCreate"));
 const SubUpdate = lazy(() => import("./pages/admin/sub/SubUpdate"));
+const BrandCreate = lazy(() => import("./pages/admin/brand/BrandCreate"));
+const BrandUpdate = lazy(() => import("./pages/admin/brand/BrandUpdate"));
 const ProductCreate = lazy(() => import("./pages/admin/product/ProductCreate"));
 const SallerProductCreate = lazy(() => import("./pages/saller/product/SallerProductCreate"));
 const SallerColorCreate = lazy(() => import("./pages/saller/color/ColorCreate"));
@@ -53,6 +55,7 @@ const ProductUpdate = lazy(() => import("./pages/admin/product/ProductUpdate"));
 const Product = lazy(() => import("./pages/Product"));
 const CategoryHome = lazy(() => import("./pages/category/CategoryHome"));
 const SubHome = lazy(() => import("./pages/sub/SubHome"));
+const BrandHome = lazy(() => import("./pages/brandHome/BrandHome"));
 const Shop = lazy(() => import("./pages/Shop"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Checkout = lazy(() => import("./pages/Checkout"));
@@ -100,7 +103,7 @@ const App = () => {
         </div>
       }
     >
-      <KomunicateChat/>
+      <KomunicateChat />
       <SideDrawer />
       <ToastContainer />
       <Switch>
@@ -137,6 +140,8 @@ const App = () => {
         />
         <AdminRoute exact path="/admin/sub" component={SubCreate} />
         <AdminRoute exact path="/admin/sub/:slug" component={SubUpdate} />
+        <AdminRoute exact path="/admin/brand" component={BrandCreate} />
+        <AdminRoute exact path="/admin/brand/:slug" component={BrandUpdate} />
         <AdminRoute exact path="/admin/product" component={ProductCreate} />
         <SallerRoute exact path="/saller/product" component={SallerProductCreate} />
         <AdminRoute exact path="/admin/products" component={AllProducts} />
@@ -148,6 +153,7 @@ const App = () => {
         <Route exact path="/product/:slug" component={Product} />
         <Route exact path="/category/:slug" component={CategoryHome} />
         <Route exact path="/sub/:slug" component={SubHome} />
+        <Route exact path="/brand/:slug" component={BrandHome} />
         <Route exact path="/shop" component={Shop} />
         <Route exact path="/cart" component={Cart} />
         <UserRoute exact path="/checkout" component={Checkout} />

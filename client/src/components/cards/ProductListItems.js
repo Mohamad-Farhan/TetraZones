@@ -8,7 +8,7 @@ const ProductListItems = ({ product }) => {
     subs,
     shipping,
     colors,
-    brand,
+    brands,
     quantity,
     // sold,
   } = product;
@@ -70,12 +70,20 @@ const ProductListItems = ({ product }) => {
         </li>
       )}
 
-      <li className="list-group-item">
-        <span className="label label-default label-pill pull-xs-left">
-          {brand}
-        </span>
-        <div className="label label-default label-pill pull-xs-right">{" "}الماركة</div>
-      </li>
+      {brands && (
+        <li className="list-group-item">
+          {brands.map((b) => (
+            <Link
+              key={b._id}
+              to={`/brand/${b.slug}`}
+              className="label label-default label-pill pull-xs-left"
+            >
+              <div>{b.name}</div>
+            </Link>
+          ))}
+          <div className="label label-default label-pill pull-xs-right"> الماركة </div>
+        </li>
+      )}
 
       <li className="list-group-item">
         <span className="label label-default label-pill pull-xs-letf">

@@ -6,6 +6,7 @@ import { createProduct } from "../../../functions/product";
 import ProductCreateForm from "../../../components/forms/ProductCreateForm";
 import { getCategories, getCategorySubs } from "../../../functions/category";
 import { getColors } from "../../../functions/color";
+import { getBrands } from "../../../functions/brand";
 import FileUpload from "../../../components/forms/FileUpload";
 import { LoadingOutlined } from "@ant-design/icons";
 import Header from '../../../components/nav/Header';
@@ -21,13 +22,14 @@ const initialState = {
   quantity: "",
   images: [],
   color: [],
-  brand: "",
+  brand: [],
 };
 
 const ProductCreate = () => {
   const [values, setValues] = useState(initialState);
   const [subOptions, setSubOptions] = useState([]);
   const [colorOptions, setColorOptions] = useState([]);
+  const [brandOptions, setBrandOptions] = useState([]);
   const [showSub, setShowSub] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -69,6 +71,9 @@ const ProductCreate = () => {
     getColors(e.target.value).then((res) => {
       setColorOptions(res.data);
     });
+    getBrands(e.target.value).then((res) => {
+      setBrandOptions(res.data);
+    });
     setShowSub(true);
   };
 
@@ -103,6 +108,7 @@ const ProductCreate = () => {
               handleCatagoryChange={handleCatagoryChange}
               subOptions={subOptions}
               colorOptions={colorOptions}
+              brandOptions={brandOptions}
               showSub={showSub}
             />
           </div>

@@ -5,6 +5,7 @@ import {
 } from "../functions/product";
 import { getCategories } from "../functions/category";
 import { getSubs } from "../functions/sub";
+import { getBrands } from "../functions/brand";
 import { useSelector, useDispatch } from "react-redux";
 import ProductCard from "../components/cards/ProductCard";
 import { Menu, Slider, Checkbox } from "antd";
@@ -28,10 +29,10 @@ const Shop = () => {
   // eslint-disable-next-line 
   const [star, setStar] = useState("");
   const [subs, setSubs] = useState([]);
+  const [brands, setBrands] = useState([]);
   // eslint-disable-next-line 
   const [sub, setSub] = useState("");
-  // eslint-disable-next-line 
-  const [color, setColor] = useState("");
+  const [brand, setBrand] = useState("");
   const [shipping, setShipping] = useState("");
 // eslint-disable-next-line 
   let dispatch = useDispatch();
@@ -44,6 +45,8 @@ const Shop = () => {
     getCategories().then((res) => setCategories(res.data));
     // fetch subcategories
     getSubs().then((res) => setSubs(res.data));
+    // fetch brand
+    getBrands().then((res) => setBrands(res.data));
     // eslint-disable-next-line
   }, []);
 
@@ -89,6 +92,7 @@ const Shop = () => {
     setPrice(value);
     setStar("");
     setSub("");
+    setBrand("");
     setShipping("");
     setTimeout(() => {
       setOk(!ok);
@@ -123,6 +127,7 @@ const Shop = () => {
     setPrice([0, 0]);
     setStar("");
     setSub("");
+    setBrand("");
     setShipping("");
     let inTheState = [...categoryIds];
     let justChecked = e.target.value;
@@ -150,6 +155,7 @@ const Shop = () => {
     setCategoryIds([]);
     setStar(num);
     setSub("");
+    setBrand("");
     setShipping("");
     fetchProducts({ stars: num });
   };
@@ -190,6 +196,32 @@ const Shop = () => {
     fetchProducts({ sub });
   };
 
+  // 7. show products by brand category
+  const showBrands = () =>
+    brands.map((b) => (
+      <div
+        key={b._id}
+        onClick={() => handleBrand(b)}
+        className="p-1 m-1 badge badge-secondary"
+        style={{ cursor: "pointer" }}
+      >
+        {b.name}
+      </div>
+    ));
+
+  const handleBrand = (brand) => {
+    setBrand(brand);
+    dispatch({
+      type: "SEARCH_QUERY",
+      payload: { text: "" },
+    });
+    setPrice([0, 0]);
+    setCategoryIds([]);
+    setStar("");
+    setShipping("");
+    fetchProducts({ brand });
+  };
+
   // 9. show products based on shipping yes/no
   const showShipping = () => (
     <>
@@ -215,6 +247,7 @@ const Shop = () => {
 
   const handleShippingchange = (e) => {
     setSub("");
+    setBrand("");
     dispatch({
       type: "SEARCH_QUERY",
       payload: { text: "" },
@@ -295,6 +328,20 @@ const Shop = () => {
               >
                 <div style={{ maringTop: "-10px" }} className="pl-4 pr-4">
                   {showSubs()}
+                </div>
+              </SubMenu>
+
+              {/* Brand */}
+              <SubMenu
+                key="4"
+                title={
+                  <span className="h6">
+                    <DownSquareOutlined /> الماركة
+                </span>
+                }
+              >
+                <div style={{ maringTop: "-10px" }} className="pl-4 pr-4">
+                  {showBrands()}
                 </div>
               </SubMenu>
 

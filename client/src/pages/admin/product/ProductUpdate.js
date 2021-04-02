@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { getProduct, updateProduct } from "../../../functions/product";
 import { getCategories, getCategorySubs } from "../../../functions/category";
 import { getColors } from "../../../functions/color";
+import { getBrands } from "../../../functions/brand";
 import FileUpload from "../../../components/forms/FileUpload";
 import { LoadingOutlined } from "@ant-design/icons";
 import ProductUpdateForm from "../../../components/forms/ProductUpdateForm";
@@ -20,7 +21,7 @@ const initialState = {
   quantity: "",
   images: [],
   color: [],
-  brand: "",
+  brand: [],
 };
 
 const ProductUpdate = ({ match, history }) => {
@@ -29,6 +30,7 @@ const ProductUpdate = ({ match, history }) => {
   const [categories, setCategories] = useState([]);
   const [subOptions, setSubOptions] = useState([]);
   const [colorOptions, setColorOptions] = useState([]);
+  const [brandOptions, setBrandOptions] = useState([]);
   const [arrayOfSubs, setArrayOfSubs] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [loading, setLoading] = useState(false);
@@ -53,7 +55,7 @@ const ProductUpdate = ({ match, history }) => {
       });
       // 3 prepare array of sub ids to show as default sub values in antd Select
       let arr = [];
-      p.data.subs.map((s) =>  arr.push(s._id));
+      p.data.subs.map((s) => arr.push(s._id));
       // eslint-disable-next-line
       setArrayOfSubs((prev) => arr); // required for ant design select to work
     });
@@ -100,6 +102,9 @@ const ProductUpdate = ({ match, history }) => {
     getColors(e.target.value).then((res) => {
       setColorOptions(res.data);
     });
+    getBrands(e.target.value).then((res) => {
+      setBrandOptions(res.data);
+    });
 
     // if user clicks back to the original category
     // show its sub categories in default
@@ -143,6 +148,7 @@ const ProductUpdate = ({ match, history }) => {
               categories={categories}
               subOptions={subOptions}
               colorOptions={colorOptions}
+              brandOptions={brandOptions}
               arrayOfSubs={arrayOfSubs}
               setArrayOfSubs={setArrayOfSubs}
               selectedCategory={selectedCategory}
