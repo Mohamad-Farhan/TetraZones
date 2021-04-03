@@ -76,36 +76,48 @@ const Checkout = ({ history }) => {
 
   const saveDetailsToDb = () => {
     saveUserAddress(user.token, address).then((res) => {
-      if (res.data) {
+      if (!address) {
+        toast.error("تاكد من اسم الشارع ورقم البناية")
+      } else {
         setAddressSaved(true);
       }
     });
     saveUserFirstName(user.token, firstName).then((res) => {
-      if (res.data) {
+      if (!firstName) {
+        toast.error("تاكد من الاسم الاول")
+      } else {
         setFirstNameSaved(true);
       }
+
     });
     saveUserLastName(user.token, lastName).then((res) => {
-      if (res.data) {
+      if (!lastName) {
+        toast.error("تاكد من الاسم الاخير")
+      } else {
         setLastNameSaved(true);
       }
     });
     saveUserCity(user.token, city).then((res) => {
-      if (res.data) {
+      if (!city) {
+        toast.error("تاكد من المدينة")
+      } else {
         setCitySaved(true);
       }
     });
     saveUserRegion(user.token, region).then((res) => {
-      if (res.data) {
+      if (!region) {
+        toast.error("تاكد من المنطقة")
+      } else {
         setRegionSaved(true);
       }
     });
     saveUserPhoneNumber(user.token, phoneNumber).then((res) => {
-      if (res.data) {
+      if (!phoneNumber || phoneNumber.length < 10) {
+        toast.error("تاكد من رقم الهاتف")
+      } else {
         setPhoneNumberSaved(true);
       }
     });
-    toast('Your address saved');
   };
 
   const applyDiscountCoupon = () => {
@@ -325,28 +337,17 @@ const Checkout = ({ history }) => {
           <h4 className='text-right'>عنوان التسليم</h4>
           {showdetails()}
           <br />
-          <br />
-          <br />
           <div className="row">
-            <div className="col-md-6">
-              {COD ? (
-                <button
-                  className="btn btn-primary float-right"
-                  onClick={createCashOrder}
-                >
-                  شراء
+            <div className="col-md-4">
+              <button
+                className="btn btn-primary float-right"
+                onClick={createCashOrder}
+                disabled={!phoneNumberSaved || !firstNameSaved || !lastNameSaved}
+              >
+                شراء
                 </button>
-              ) : (
-                <button
-                  className="btn btn-primary float-right"
-                  onClick={createCashOrder}
-                >
-                  شراء
-                </button>
-              )}
             </div>
-
-            <div className="col-md-6">
+            <div className="col-md-4">
               <button
                 disabled={!products.length}
                 onClick={emptyCart}

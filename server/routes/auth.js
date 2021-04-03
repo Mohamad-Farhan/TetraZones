@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 // middlewares
-const { authCheck, adminCheck, sallerCheck, SallerAuth } = require("../middlewares/auth");
+const { authCheck, adminCheck, sallerCheck } = require("../middlewares/auth");
 
 // controller
 const { createOrUpdateUser, currentUser } = require("../controllers/auth");

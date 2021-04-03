@@ -18,12 +18,12 @@ const RegisterComplete = ({ history }) => {
     e.preventDefault();
     // validation
     if (!email || !password) {
-      toast.error("Email and password is required");
+      toast.error("تاكد من الاميل وكلمة المرور");
       return;
     }
 
     if (password.length < 6) {
-      toast.error("Password must be at least 6 characters long");
+      toast.error("الباسورد يجب ان يكون 6 احرف على الاقل");
       return;
     }
 
