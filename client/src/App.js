@@ -62,7 +62,6 @@ const Checkout = lazy(() => import("./pages/Checkout"));
 const CreateCouponPage = lazy(() =>
   import("./pages/admin/coupon/CreateCouponPage")
 );
-const Payment = lazy(() => import("./pages/Payment"));
 
 const App = () => {
   const dispatch = useDispatch();
@@ -158,7 +157,6 @@ const App = () => {
         <Route exact path="/cart" component={Cart} />
         <UserRoute exact path="/checkout" component={Checkout} />
         <AdminRoute exact path="/admin/coupon" component={CreateCouponPage} />
-        <UserRoute exact path="/payment" component={Payment} />
       </Switch>
     </Suspense>
   );
