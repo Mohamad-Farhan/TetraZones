@@ -108,6 +108,18 @@ const Header = () => {
           <Link to="/user/history"><b className="nav-text-icon">مشترياتك</b></Link>
         </Item>
       )}
+      <Item className='hover float-right'>
+        <Link to="/category/dotlmnzly/"><b className="nav-text">ادوات منزلية</b></Link>
+      </Item>
+      <Item className='hover float-right'>
+        <Link to="/"><b className="nav-text">ادوات كهربائية</b></Link>
+      </Item>
+      <Item className='hover  float-right'>
+        <Link to="/category/mlbs"><b className="nav-text">ملابس</b></Link>
+      </Item>
+      <Item className='hover  float-right'>
+        <Link to="/"><b className="nav-text">اثاث</b></Link>
+      </Item>
     </Menu>
   );
 };
