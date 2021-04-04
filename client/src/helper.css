@@ -1,0 +1,38 @@
+/* Helper class for me */
+
+.nav-text-icon {
+    color: white;
+    font-size: medium;
+}
+
+.footer-text-icon {
+    color: white;
+}
+
+.width{
+    width: 100px;
+}
+
+.search-nav {
+    width: 600px;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 5px;
+    height: 35px;
+    text-align: center;
+}
+
+.nav-color {
+    background-color: black;
+}
+
+@media screen and (max-width: 500px) {
+    .search-nav {
+        display: inline-block;
+        width: 350px;
+    }
+}
+
+.hover:hover {
+    border: 1px solid white;
+}

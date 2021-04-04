@@ -28,23 +28,23 @@ const Home = () => {
         </AliceCarousel>
       </div>
 
-      <h4 className="text-center p-3 mt-5 mb-5 display-4 jumbotron">
-        المنتجات الجديدة
-      </h4>
+      <h3 className="text-center p-3 mt-5 mb-5 display-4" style={{ color: 'white', backgroundColor: '#f27000' }}>
+        <b>المنتجات الجديدة</b>
+      </h3>
       <NewArrivals />
 
-      <h4 className="text-center p-3 mt-5 mb-5 display-4 jumbotron">
-        الأكثر مبيعا
+      <h4 className="text-center p-3 mt-5 mb-5 display-4" style={{ color: 'white', backgroundColor: '#f27000' }}>
+        <b> الأكثر مبيعا</b>
       </h4>
       <BestSellers />
 
-      <h4 className="text-center p-3 mt-5 mb-5 display-4 jumbotron">
-        الأقسام
+      <h4 className="text-center p-3 mt-5 mb-5 display-4" style={{ color: 'white', backgroundColor: '#f27000' }}>
+        <b>الأقسام</b>
       </h4>
       <CategoryList />
 
-      <h4 className="text-center p-3 mt-5 mb-5 display-4 jumbotron">
-        الأقسام الفرعية
+      <h4 className="text-center p-3 mt-5 mb-5 display-4" style={{ color: 'white', backgroundColor: '#f27000' }}>
+        <b> الأقسام الفرعية</b>
       </h4>
       <SubList />
 

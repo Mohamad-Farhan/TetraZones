@@ -14,10 +14,12 @@ import { Link } from "react-router-dom";
 import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import Search from "../forms/Search";
+import '../../../src/helper.css'
 
 const { SubMenu, Item } = Menu;
 
-const LRHeader = () => {
+const Header = () => {
     const [current, setCurrent] = useState("home");
 
     let dispatch = useDispatch();
@@ -39,45 +41,38 @@ const LRHeader = () => {
     };
 
     return (
-        <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal" className='sticky-top'>
-            <Item className='float-right'>
-                <img src={Logo} className='img-fluid' style={{ width: 200 }} alt="jsx-a11y/img-redundant-alt" />
-                <Link to="/"></Link>
+        <Menu onClick={handleClick} selectedKeys={[current]} mode='vertical' className='nav-color'>
+            <div className='float-right hover m-2'>
+                <Link to="/">
+                    <img src={Logo} className='img-fluid' />
+                </Link>
+            </div>
+
+            <Item key="shop" icon={<ShoppingOutlined style={{ color: 'white', fontSize: '20px' }} />} className='float-right hover'>
+                <Link to="/shop"><b className='nav-text-icon'>الكل</b></Link>
             </Item>
 
-            <Item className='float-right' key="home" icon={<AppstoreOutlined />}>
-                <Link to="/">الرئيسية</Link>
-            </Item>
-
-            <Item className='float-right' key="shop" icon={<ShoppingOutlined />}>
-                <Link to="/shop">الكل</Link>
-            </Item>
-
-            <Item className='float-right' key="cart" icon={<ShoppingCartOutlined />}>
+            <Item key="cart" icon={<ShoppingCartOutlined style={{ color: 'white', fontSize: '20px' }} />} className='float-left hover'>
                 <Link to="/cart">
                     <Badge count={cart.length} offset={[9, 0]}>
-                        السلة
-          </Badge>
+                        <b className='nav-text-icon'>السلة</b>
+                    </Badge>
                 </Link>
             </Item>
 
             {!user && (
-                <Item key="register" icon={<UserAddOutlined />} className="float-left">
-                    <Link to="/register">انشاء حساب</Link>
+                <Item
+                    key="login"
+                    className="nav-text-icon float-left hover"
+                    style={{ width: '150px' }} icon={<UserOutlined />}>
+                    <Link to="/login"><b className="nav-text-icon">تسجيل الدخول</b></Link>
                 </Item>
             )}
-
-            {!user && (
-                <Item key="login" icon={<UserOutlined />} className="float-left">
-                    <Link to="/login">تسجيل الدخول</Link>
-                </Item>
-            )}
-
             {user && (
                 <SubMenu
-                    icon={<SettingOutlined />}
-                    title={user.email && user.email.split("@")[0]}
-                    className="float-left"
+                    title={'Hello' && user.email && user.email.split("@")[0]}
+                    className="nav-text-icon float-left hover"
+                    style={{ width: '155px' }}
                 >
                     {user && user.role === "subscriber" && (
                         <Item>
@@ -91,13 +86,27 @@ const LRHeader = () => {
                         </Item>
                     )}
 
+                    {user && user.role === "saller" && (
+                        <Item>
+                            <Link to="/saller/dashboard">صفحة البائع</Link>
+                        </Item>
+                    )}
+                    <Item>
+                        <Link to="/help">هل تحتاج مساعدة؟</Link>
+                    </Item>
+
                     <Item icon={<LogoutOutlined />} onClick={logout}>
                         تسجيل الخروج
           </Item>
                 </SubMenu>
             )}
+            {user && (
+                <Item className='hover width'>
+                    <Link to="/user/history"><b className="nav-text-icon">مشترياتك</b></Link>
+                </Item>
+            )}
         </Menu>
     );
 };
 
-export default LRHeader;
+export default Header;

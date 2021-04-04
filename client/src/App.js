@@ -14,6 +14,7 @@ const Register = lazy(() => import("./pages/auth/Register"));
 const Home = lazy(() => import("./pages/Home"));
 const Help = lazy(() => import("./pages/Help"));
 const SideDrawer = lazy(() => import("./components/drawer/SideDrawer"));
+const Footer = lazy(() => import("./components/nav/Footer"));
 
 const RegisterComplete = lazy(() => import("./pages/auth/RegisterComplete"));
 const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
@@ -158,6 +159,7 @@ const App = () => {
         <UserRoute exact path="/checkout" component={Checkout} />
         <AdminRoute exact path="/admin/coupon" component={CreateCouponPage} />
       </Switch>
+      <Footer />
     </Suspense>
   );
 };
