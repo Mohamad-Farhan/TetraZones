@@ -14,12 +14,12 @@
 }
 
 .nav-text {
-    font-size: 12px;
+    font-size: 13px;
     color: white;
 }
 
 .search-nav {
-    width: 600px;
+    width: 500px;
     display: inline-block;
     border: 1px solid;
     border-radius: 5px;
