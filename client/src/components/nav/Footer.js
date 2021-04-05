@@ -2,8 +2,13 @@ import React from "react";
 import '../../helper.css'
 const Footer = () => {
 
+    const scrollTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <footer className="nav-color text-center text-white">
+            <button className='btn btn-outline-light btn-floating m-1' onClick={scrollTop}>الرجوع لأعلى</button>
             <div className="container p-4">
                 <section className="mb-4">
                     <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-facebook-f"></i></a>

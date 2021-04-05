@@ -19,6 +19,7 @@
     "react": "^16.13.1",
     "react-alice-carousel": "^2.4.0",
     "react-awesome-slider": "^4.1.0",
+    "react-back-to-top-button": "0.0.14",
     "react-bootstrap": "^1.5.2",
     "react-datepicker": "^3.2.2",
     "react-dom": "^16.13.1",
