@@ -107,7 +107,7 @@ const SingleProduct = ({ product, onStarClick, star }) => {
           <ProductListItems product={product} />
         </Card>
       </div>
-      <div className="col-md-5">
+      <div className="col-md-7">
         {images && images.length ? (
           <Carousel showArrows={true} infiniteLoop >
             {images && images.map((i) => <img src={i.url} key={i.public_id}/>)}
@@ -118,7 +118,9 @@ const SingleProduct = ({ product, onStarClick, star }) => {
 
         <Tabs type="card">
           <TabPane tab="تفاصيل المنتج" key="1" className='text-right'>
-            {description && description}
+           <div>
+              {description && description}
+           </div>
           </TabPane>
           <TabPane tab="أخرى" key="2" className='text-right'>
             التواصل على الواتس على الرقم التالي 0785836823 لمعرفة المزيد عن المنتج

@@ -10,8 +10,7 @@ const ShowPaymentInfo = ({ order, showStatus = true }) => (
       </span>
       <br />
       <span>
-       {(order.paymentIntent.amount /= 100).toLocaleString("en-US")} JD المبلغ كامل
-       
+       {(order.paymentIntent.amount /= 100) + 3}  JD المبلغ كامل 
       </span>
       <br />
       <span>

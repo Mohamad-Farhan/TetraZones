@@ -23,48 +23,36 @@ const Footer = () => {
 
                 </section>
 
-                <section class="mb-4 footer-text-icon">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-                        eum harum corrupti dicta, aliquam sequi voluptate quas.
-                    </p>
-                </section>
                 <section className="">
                     <div className="row">
+                        <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 className="text-uppercase footer-text-icon">دعنا نساعدك</h5>
+
+
+                            <ul className="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" className="text-white"> فايرس كورنا المستجد (كوفد-19) و(اسم الموقع)</a>
+                                </li>
+                                <li>
+                                    <a href="#!" className="text-white"> حسابك</a>
+                                </li>
+                                <li>
+                                    <a href="#!" className="text-white"> مشترياتك</a>
+                                </li>
+                                <li>
+                                    <a href="#!" className="text-white"> طلبات الأرجاع</a>
+                                </li>
+                                <li>
+                                    <a href="#!" className="text-white"> المساعدة </a>
+                                </li>
+                            </ul>
+                        </div>
                         <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                             <h5 className="text-uppercase footer-text-icon">طريقة الدفع</h5>
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="#!" className="text-white">Link 1</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white">Link 2</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white">Link 4</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <h5 className="text-uppercase footer-text-icon">دعنا نساعدك</h5>
-
-                            <ul className="list-unstyled mb-0">
-                                <li>
-                                    <a href="#!" className="text-white">Link 1</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white">Link 2</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white">Link 4</a>
+                                    <a href="#!" className="text-white"> الدفع عند التوصيل</a>
                                 </li>
                             </ul>
                         </div>
@@ -73,16 +61,10 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="#!" className="text-white">Link 1</a>
+                                    <a href="#!" className="text-white"> وظائف</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white">Link 2</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white">Link 3</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white">Link 4</a>
+                                    <a href="#!" className="text-white"> معلومات عن (اسم الموقع)</a>
                                 </li>
                             </ul>
                         </div>
@@ -91,16 +73,16 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="#!" className="text-white">Link 1</a>
+                                    <a href="#!" className="text-white"> البيع على (اسم الموقع)</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white">Link 2</a>
+                                    <a href="#!" className="text-white"> انضم لنا</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white">Link 3</a>
+                                    <a href="#!" className="text-white"> أعلن عن منتجاتك</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white">Link 4</a>
+                                    <a href="#!" className="text-white"> سوق لنفسك معنا</a>
                                 </li>
                             </ul>
                         </div>

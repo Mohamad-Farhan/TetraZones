@@ -37,7 +37,7 @@ const Cart = ({ history }) => {
           <th scope="col" className='text-right'>الغاء المنتج</th>
           <th scope="col" className='text-right'>التوصيل</th>
           <th scope="col" className='text-right'>العدد</th>
-          <th scope="col" className='text-right'>اللون/ الرجاء كتابة اللون</th>
+          <th scope="col" className='text-right'> الرجاء اختيار اللون</th>
           <th scope="col" className='text-right'>الماركة</th>
           <th scope="col" className='text-right'>السعر</th>
           <th scope="col" className='text-right'>الأسم</th>

@@ -18,26 +18,33 @@
     color: white;
 }
 
+.search-button{
+    font-size: 20px;
+    color: white;
+}
+
 .search-nav {
-    width: 500px;
+    width: 550px;
     display: inline-block;
     border: 1px solid;
     border-radius: 5px;
     height: 35px;
     text-align: center;
+    padding-right: 5px;
 }
 
 .nav-color {
-    background-color: black;
+    background-color: #282027;
 }
 
 @media screen and (max-width: 500px) {
     .search-nav {
         display: inline-block;
-        width: 350px;
+        width: 300px;
     }
 }
 
 .hover:hover {
     border: 1px solid white;
+    border-radius: 5px;
 }

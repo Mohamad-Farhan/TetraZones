@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { Menu, Badge } from "antd";
 import Logo from './logo6.png'
 import {
-  AppstoreOutlined,
-  SettingOutlined,
   UserOutlined,
-  UserAddOutlined,
   LogoutOutlined,
   ShoppingOutlined,
   ShoppingCartOutlined,

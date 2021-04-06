@@ -5,11 +5,11 @@ class KomunicateChat extends Component {
     }
     componentDidMount() {
         (function (d, m) {
-            var kommunicateSettings =
+            let kommunicateSettings =
                 { "appId": "4285c01425299e57295c187f53ae9ae1", "popupWidget": true, "automaticChatOpenOnNavigation": true };
-            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            let script = document.createElement("script"); script.type = "text/javascript"; script.async = true;
+            script.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            let head = document.getElementsByTagName("head")[0]; head.appendChild(script);
             window.kommunicate = m; m._globals = kommunicateSettings;
         })(document, window.kommunicate || {});
     }
