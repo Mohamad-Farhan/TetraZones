@@ -24,7 +24,7 @@
 }
 
 .search-nav {
-    width: 550px;
+    width: 500px;
     display: inline-block;
     border: 1px solid;
     border-radius: 5px;
@@ -34,7 +34,7 @@
 }
 
 .nav-color {
-    background-color: #282027;
+    background-color: #122D20;
 }
 
 @media screen and (max-width: 500px) {
