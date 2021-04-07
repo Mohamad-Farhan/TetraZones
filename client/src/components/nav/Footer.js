@@ -58,10 +58,10 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> وظائف</a>
+                                    <a href="/jops" className="text-white border-footer"> وظائف</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white border-footer">TymonStore معلومات عن</a>
+                                    <a href="/aboutUs" className="text-white border-footer">TymonStore معلومات عن</a>
                                 </li>
                             </ul>
                         </div>

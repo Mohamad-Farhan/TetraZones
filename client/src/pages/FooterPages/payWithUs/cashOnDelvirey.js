@@ -1,7 +1,7 @@
 import React from "react";
 import Header from '../../../components/nav/Header';
 
-const Jops = () => {
+const AdvertiseYourProduct = () => {
     return (
         <>
             <Header />
@@ -11,12 +11,12 @@ const Jops = () => {
                     <div className='card'>
                         <div className='card-header'>
                             <h4 className='card-link col-md-5 float-right text-right'>
-                                الوظائف
+                                الدفع عند التوصيل
                             </h4>
                         </div>
                         <div>
                             <h6 className='card-body text-right'>
-                             Linkedin  لا توجد وظائف حالياً عند التوفر سوف نعلن هنا و على 
+                                
                             </h6>
                         </div>
                     </div>
@@ -26,4 +26,4 @@ const Jops = () => {
     );
 };
 
-export default Jops;
+export default AdvertiseYourProduct;
