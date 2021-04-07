@@ -19,7 +19,7 @@ const Home = () => {
           <Link to="/shop">
             <img src={cover} className="sliderimg img-fluid" alt='jsx-a11y/alt-text' />
           </Link>
-          <Link to='/category/dotlmnzly'>
+          <Link to='/category/adotmnzly'>
             <img src={cover2} className=" sliderimg img-fluid" alt='jsx-a11y/alt-text' />
           </Link>
           <Link to='/shop'>

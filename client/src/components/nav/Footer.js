@@ -31,16 +31,13 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> فايرس كورنا المستجد (كوفد-19) و(اسم الموقع)</a>
+                                    <a href="#!" className="text-white border-footer"> فايرس كورنا المستجد (كوفد-19)  TymonStore و</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> حسابك</a>
+                                    <a href="/user/history" className="text-white border-footer"> حسابك</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> مشترياتك</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white border-footer"> طلبات الأرجاع</a>
+                                    <a href="/user/history" className="text-white border-footer"> مشترياتك</a>
                                 </li>
                                 <li>
                                     <a href="#!" className="text-white border-footer"> المساعدة </a>
@@ -57,14 +54,14 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                            <h5 className="text-uppercase footer-text-icon border-footer" >اعرف المزيد عنا</h5>
+                            <h5 className="text-uppercase footer-text-icon" >اعرف المزيد عنا</h5>
 
                             <ul className="list-unstyled mb-0">
                                 <li>
                                     <a href="#!" className="text-white border-footer"> وظائف</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> معلومات عن (اسم الموقع)</a>
+                                    <a href="#!" className="text-white border-footer">TymonStore معلومات عن</a>
                                 </li>
                             </ul>
                         </div>
@@ -73,16 +70,13 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="/yourSaller" className="text-white border-footer"> البيع على (اسم الموقع)</a>
+                                    <a href="/yourSaller" className="text-white border-footer">TymonStore البيع على </a>
                                 </li>
                                 <li>
                                     <a href="/joinWithUs" className="text-white border-footer"> انضم لنا</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> أعلن عن منتجاتك</a>
-                                </li>
-                                <li>
-                                    <a href="#!" className="text-white border-footer"> سوق لنفسك معنا</a>
+                                    <a href="/advertiseYourProduct" className="text-white border-footer"> أعلن عن منتجاتك</a>
                                 </li>
                             </ul>
                         </div>
@@ -91,8 +85,8 @@ const Footer = () => {
             </div>
 
             <div className="text-center p-3" style={{ backgroundcolor: 'rgba(0, 0, 0, 0.2)' }}>
-                © 2020 Copyright:
-    <a className="text-white" href="/"> Web Name</a>
+                © 2021 Copyright:
+                <a className="text-white" href="/"> TymonStore</a>
             </div>
         </footer>
     );

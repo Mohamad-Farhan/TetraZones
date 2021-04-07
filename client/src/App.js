@@ -17,6 +17,7 @@ const SideDrawer = lazy(() => import("./components/drawer/SideDrawer"));
 const Footer = lazy(() => import("./components/nav/Footer"));
 const YourSaller = lazy(() => import("./pages/FooterPages/partnerWithUs/Saller"));
 const JoinWithUs = lazy(() => import("./pages/FooterPages/partnerWithUs/JoineWithUs"));
+const AdvertiseYourProduct = lazy(() => import("./pages/FooterPages/partnerWithUs/AdvertiseYourProduct"));
 
 const RegisterComplete = lazy(() => import("./pages/auth/RegisterComplete"));
 const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
@@ -115,6 +116,7 @@ const App = () => {
         <Route exact path="/register" component={Register} />
         <Route exact path="/yourSaller" component={YourSaller} />
         <Route exact path="/joinWithUs" component={JoinWithUs} />
+        <Route exact path="/advertiseYourProduct" component={AdvertiseYourProduct} />
         <Route exact path="/register/complete" component={RegisterComplete} />
         <Route exact path="/forgot/password" component={ForgotPassword} />
         <UserRoute exact path="/user/history" component={History} />
