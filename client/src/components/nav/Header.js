@@ -67,7 +67,7 @@ const Header = () => {
       )}
       {user && (
         <SubMenu
-          title={'Hello' && user.email && user.email.split("@")[0]}
+          title={'Hello' && user.name && user.name}
           className="nav-text-icon float-left hover"
           style={{ width: '155px' }}
         >
