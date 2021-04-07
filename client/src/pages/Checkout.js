@@ -315,12 +315,13 @@ const Checkout = ({ history }) => {
           <p className='text-right'>
             {showProductSummary()}
           </p>
+          <p className='text-right'> .يضاف 3 دنانير توصيل</p>
           <hr />
-          <p className='text-right'> {total} JD السعر الكامل</p>
+          <p className='text-right'> {total + 3} JD السعر الكامل</p>
 
           {totalAfterDiscount > 0 && (
             <p className="bg-success p-2">
-              {totalAfterDiscount}JD :السعر بعد الخصم
+              {totalAfterDiscount + 3}JD :السعر بعد الخصم
             </p>
           )}
           <hr />

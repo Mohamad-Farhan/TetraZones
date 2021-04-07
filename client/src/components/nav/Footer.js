@@ -7,7 +7,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="nav-color text-center text-white">
+        <footer className="nav-color text-center text-white footer-container">
             <button className='btn btn-outline-light btn-floating m-1' onClick={scrollTop}>الرجوع لأعلى</button>
             <div className="container p-4">
                 <section className="mb-4">

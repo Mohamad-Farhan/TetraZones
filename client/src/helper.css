@@ -9,6 +9,13 @@
     color: white;
 }
 
+footer {
+    clear: both;
+    position: relative;
+    height: 100%;
+    margin-top: 222px;
+}
+
 .width {
     width: 100px;
 }
@@ -18,7 +25,7 @@
     color: white;
 }
 
-.search-button{
+.search-button {
     font-size: 20px;
     color: white;
 }
@@ -37,10 +44,10 @@
     background-color: #122D20;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
     .search-nav {
         display: inline-block;
-        width: 300px;
+        width: 250px;
     }
 }
 

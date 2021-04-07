@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { auth, googleAuthProvider } from "../../firebase";
+import { auth, facebookAuthProvider, googleAuthProvider } from "../../firebase";
 import { toast } from "react-toastify";
 import { Button } from "antd";
-import { MailOutlined, GoogleOutlined } from "@ant-design/icons";
+import { MailOutlined, GoogleOutlined, FacebookOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { createOrUpdateUser } from "../../functions/auth";
@@ -99,6 +99,34 @@ const Login = ({ history }) => {
       });
   };
 
+  const facebookLogin = async () => {
+    auth
+      .signInWithPopup(facebookAuthProvider)
+      .then(async (result) => {
+        const { user } = result;
+        const idTokenResult = await user.getIdTokenResult();
+        createOrUpdateUser(idTokenResult.token)
+          .then((res) => {
+            dispatch({
+              type: "LOGGED_IN_USER",
+              payload: {
+                name: res.data.name,
+                email: res.data.email,
+                token: idTokenResult.token,
+                role: res.data.role,
+                _id: res.data._id,
+              },
+            });
+            roleBasedRedirect(res);
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message);
+      });
+  };
+
   const loginForm = () => (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
@@ -147,7 +175,7 @@ const Login = ({ history }) => {
             {loading ? (
               <h4 className="text-danger">Loading...</h4>
             ) : (
-              <h4 className='text-right'>تسجيل الدخول</h4>
+              <h4 className='text-right'>سجل الدخول</h4>
             )}
             {loginForm()}
 
@@ -160,7 +188,19 @@ const Login = ({ history }) => {
               icon={<GoogleOutlined />}
               size="large"
             >
-              Google تسجيل الدخول باستخدام
+              Google سجل الدخول باستخدام
+          </Button>
+            <br />
+            <Button
+              onClick={facebookLogin}
+              className="mb-2"
+              style={{ backgroundColor: "#3b5998", color: 'white' }}
+              block
+              shape="round"
+              icon={<FacebookOutlined />}
+              size="large"
+            >
+              Facebook   سجل الدخول باستخدام
           </Button>
 
             <Link to="/forgot/password" className="float-right text-danger">
