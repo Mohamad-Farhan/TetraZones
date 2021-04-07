@@ -6,7 +6,6 @@ const YourSaller = () => {
         <>
             <Header />
             <div className='container'>
-                <h4 className='text-right '>الاسئلة الاكثر شيوعا</h4>
                 <br />
                 <div id='accordion'>
                     <div className='card'>

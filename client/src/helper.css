@@ -55,3 +55,17 @@ footer {
     border: 1px solid white;
     border-radius: 5px;
 }
+
+.font-size-icons {
+    font-size: x-large;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.border-radius {
+    border-radius: 5px;
+}
+
+.border-footer:hover {
+    border-bottom: 1px solid white;
+}
