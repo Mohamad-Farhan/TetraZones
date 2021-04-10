@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { Menu, Badge } from "antd";
 import Logo from './logo6.png'
 import {
-    AppstoreOutlined,
-    SettingOutlined,
     UserOutlined,
-    UserAddOutlined,
     LogoutOutlined,
     ShoppingOutlined,
     ShoppingCartOutlined,
@@ -14,7 +11,6 @@ import { Link } from "react-router-dom";
 import firebase from "firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import Search from "../forms/Search";
 import '../../../src/helper.css'
 
 const { SubMenu, Item } = Menu;
@@ -44,7 +40,7 @@ const Header = () => {
         <Menu onClick={handleClick} selectedKeys={[current]} mode='vertical' className='nav-color'>
             <div className='float-right hover m-2'>
                 <Link to="/">
-                    <img src={Logo} className='img-fluid' />
+                    <img src={Logo} className='img-fluid' alt='logo'/>
                 </Link>
             </div>
 

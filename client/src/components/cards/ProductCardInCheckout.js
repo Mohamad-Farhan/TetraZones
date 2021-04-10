@@ -29,7 +29,7 @@ const ProductCardInCheckout = ({ p }) => {
       }
 
       cart.map((product, i) => {
-        if (product._id == p._id) {
+        if (product._id === p._id) {
           cart[i].count = count;
         }
       });
@@ -45,7 +45,7 @@ const ProductCardInCheckout = ({ p }) => {
   const handleColorChange = (e) => {
     let color = e.target.value;
 
-    if (color == colors) {
+    if (color === colors) {
       toast.error(`No color ${p.color}`);
       return;
     }
@@ -58,7 +58,7 @@ const ProductCardInCheckout = ({ p }) => {
       }
 
       cart.map((product, i) => {
-        if (product._id == p._id) {
+        if (product._id === p._id) {
           cart[i].color = color;
         }
       });

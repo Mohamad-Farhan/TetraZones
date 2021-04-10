@@ -320,8 +320,8 @@ const Checkout = ({ history }) => {
           <p className='text-right'> {total + 3} JD السعر الكامل</p>
 
           {totalAfterDiscount > 0 && (
-            <p className="bg-success p-2">
-              {totalAfterDiscount + 3}JD :السعر بعد الخصم
+            <p className="bg-success p-2 text-right">
+              {totalAfterDiscount}JD :السعر بعد الخصم
             </p>
           )}
           <hr />
