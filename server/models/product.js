@@ -46,8 +46,8 @@ const productSchema = new mongoose.Schema(
       type: Array,
     },
     shipping: {
-      type: String,
-      enum: ["Free", "3JD"],
+      type: ObjectId,
+      ref: "Shipping"
     },
     colors: [
       {
