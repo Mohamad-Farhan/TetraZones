@@ -100,7 +100,7 @@ exports.productsCount = async (req, res) => {
 exports.productStar = async (req, res) => {
   const product = await Product.findById(req.params.productId).exec();
   const user = await User.findOne({ email: req.user.email }).exec();
-  const { star } = req.body;
+  const { star, comment } = req.body;
 
   let existingRatingObject = product.ratings.find(
     (ele) => ele.postedBy.toString() === user._id.toString()
@@ -111,7 +111,7 @@ exports.productStar = async (req, res) => {
     let ratingAdded = await Product.findByIdAndUpdate(
       product._id,
       {
-        $push: { ratings: { star, postedBy: user._id } },
+        $push: { ratings: { star, postedBy: user._id, comment, name: user.name } },
       },
       { new: true }
     ).exec();
@@ -122,10 +122,9 @@ exports.productStar = async (req, res) => {
       {
         ratings: { $elemMatch: existingRatingObject },
       },
-      { $set: { "ratings.$.star": star } },
+      { $set: { "ratings.$.star": star, "ratings.$.name": user.name } },
       { new: true }
     ).exec();
-    console.log("ratingUpdated", ratingUpdated);
     res.json(ratingUpdated);
   }
 };
