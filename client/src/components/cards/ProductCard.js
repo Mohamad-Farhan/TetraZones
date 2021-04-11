@@ -81,7 +81,7 @@ const ProductCard = ({ product }) => {
         <Link to={`/product/${slug}`}>
           <Meta
             title={`${title} - ${price} JD`}
-            description={`${description && description.substring(0, 40)}...`}
+            description={`...${description && description.substring(0, 40)}`}
           />
         </Link>
       </Card>

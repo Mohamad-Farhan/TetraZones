@@ -16,8 +16,8 @@ exports.list = async (req, res) =>
 
 exports.read = async (req, res) => {
     let shipping = await Shipping.findOne({ slug: req.params.slug }).exec();
-    // res.json(category);
-    const products = await Product.find({ category }).populate("shipping").exec();
+
+    const products = await Product.find({ shipping }).populate("shipping").exec();
 
     res.json({
         shipping,

@@ -3,41 +3,41 @@ import AdminNav from "../../../components/nav/AdminNav";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import {
-    createBrand,
-    getBrands,
-    removeBrand,
-} from "../../../functions/brand";
+    createShipping,
+    getShippings,
+    removeShipping,
+} from "../../../functions/shipping";
 import { Link } from "react-router-dom";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import BrandForm from "../../../components/forms/BrandForm";
+import ShippingForm from "../../../components/forms/ShippingForm";
 import LocalSearch from "../../../components/forms/LocalSearch";
 import Header from '../../../components/nav/Header';
 
-const BrandCreate = () => {
+const ShippingCreate = () => {
     const { user } = useSelector((state) => ({ ...state }));
 
     const [name, setName] = useState("");
     const [loading, setLoading] = useState(false);
-    const [brands, setBrands] = useState([]);
+    const [shippings, setShippings] = useState([]);
     // step 1
     const [keyword, setKeyword] = useState("");
 
     useEffect(() => {
-        loadBrands();
+        loadShippings();
     }, []);
 
-    const loadBrands = () =>
-        getBrands().then((c) => setBrands(c.data));
+    const loadShippings = () =>
+        getShippings().then((s) => setShippings(s.data));
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-        createBrand({ name }, user.token)
+        createShipping({ name }, user.token)
             .then((res) => {
                 setLoading(false);
                 setName("");
                 toast.success(`"${res.data.name}" is created`);
-                loadBrands();
+                loadShippings();
             })
             .catch((err) => {
                 console.log(err);
@@ -49,11 +49,11 @@ const BrandCreate = () => {
     const handleRemove = async (slug) => {
         if (window.confirm("Delete?")) {
             setLoading(true);
-            removeBrand(slug, user.token)
+            removeShipping(slug, user.token)
                 .then((res) => {
                     setLoading(false);
                     toast.error(`${res.data.name} deleted`);
-                    loadBrands();
+                    loadShippings();
                 })
                 .catch((err) => {
                     if (err.response.status === 400) {
@@ -65,7 +65,7 @@ const BrandCreate = () => {
     };
 
     // step 4
-    const searched = (keyword) => (b) => b.name.toLowerCase().includes(keyword);
+    const searched = (keyword) => (s) => s.name.toLowerCase().includes(keyword);
 
     return (
         <>
@@ -79,10 +79,10 @@ const BrandCreate = () => {
                         {loading ? (
                             <h4 className="text-danger">Loading..</h4>
                         ) : (
-                            <h4>Create brand</h4>
+                            <h4>Create shipping</h4>
                         )}
 
-                        <BrandForm
+                        <ShippingForm
                             handleSubmit={handleSubmit}
                             name={name}
                             setName={setName}
@@ -92,16 +92,16 @@ const BrandCreate = () => {
                         <LocalSearch keyword={keyword} setKeyword={setKeyword} />
 
                         {/* step 5 */}
-                        {brands.filter(searched(keyword)).map((b) => (
-                            <div className="alert alert-secondary" key={b._id}>
-                                {b.name}
+                        {shippings.filter(searched(keyword)).map((s) => (
+                            <div className="alert alert-secondary" key={s._id}>
+                                {s.name}
                                 <span
-                                    onClick={() => handleRemove(b.slug)}
+                                    onClick={() => handleRemove(s.slug)}
                                     className="btn btn-sm float-right"
                                 >
                                     <DeleteOutlined className="text-danger" />
                                 </span>
-                                <Link to={`/admin/brand/${b.slug}`}>
+                                <Link to={`/admin/shipping/${s.slug}`}>
                                     <span className="btn btn-sm float-right">
                                         <EditOutlined className="text-warning" />
                                     </span>
@@ -115,4 +115,4 @@ const BrandCreate = () => {
     );
 };
 
-export default BrandCreate;
+export default ShippingCreate;

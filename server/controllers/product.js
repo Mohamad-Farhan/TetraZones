@@ -257,11 +257,12 @@ const handleBrand = async (req, res, brand) => {
 };
 
 const handleShipping = async (req, res, shipping) => {
-  const products = await Product.find({ shipping })
+  const products = await Product.find({ shippings: shipping })
     .populate("category", "_id name")
     .populate("subs", "_id name")
     .populate("colors", "_id name")
     .populate("brands", "_id name")
+    .populate("shipping", "_id name")
     .populate("postedBy", "_id name")
     .exec();
 

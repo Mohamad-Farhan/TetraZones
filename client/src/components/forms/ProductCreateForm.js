@@ -12,6 +12,7 @@ const ProductCreateForm = ({
   subOptions,
   colorOptions,
   brandOptions,
+  shippingOpions,
   showSub,
 }) => {
   // destructure
@@ -24,6 +25,7 @@ const ProductCreateForm = ({
     quantity,
     colors,
     brands,
+    shippings
   } = values;
 
   return (
@@ -62,19 +64,6 @@ const ProductCreateForm = ({
       </div>
 
       <div className="form-group">
-        <label className='float-right'>التوصيل</label>
-        <select
-          name="shipping"
-          className="form-control"
-          onChange={handleChange}
-        >
-          <option>Please select</option>
-          <option value="3JD">3 JD</option>
-          <option value="Free">مجاني</option>
-        </select>
-      </div>
-
-      <div className="form-group">
         <label className='float-right'>كمية المنتج</label>
         <input
           type="number"
@@ -99,6 +88,24 @@ const ProductCreateForm = ({
               </option>
             ))}
         </select>
+      </div>
+
+      <div>
+        <label className='float-right'>الشحن</label>
+        <Select
+          mode="multiple"
+          style={{ width: "100%" }}
+          placeholder="Please select"
+          value={shippings}
+          onChange={(value) => setValues({ ...values, shippings: value })}
+        >
+          {
+            shippingOpions.map((s) => (
+              <Option key={s._id} value={s._id}>
+                {s.name}
+              </Option>
+            ))}
+        </Select>
       </div>
 
       <div>
@@ -128,7 +135,7 @@ const ProductCreateForm = ({
           value={brands}
           onChange={(value) => setValues({ ...values, brands: value })}
         >
-          {brandOptions.length &&
+          {
             brandOptions.map((b) => (
               <Option key={b._id} value={b._id}>
                 {b.name}

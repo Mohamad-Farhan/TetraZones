@@ -6,6 +6,7 @@ import { createProduct } from "../../../functions/product";
 import ProductCreateForm from "../../../components/forms/ProductCreateForm";
 import { getCategories, getCategorySubs } from "../../../functions/category";
 import { getColors } from "../../../functions/color";
+import { getShippings } from "../../../functions/shipping";
 import { getBrands } from "../../../functions/brand";
 import FileUpload from "../../../components/forms/FileUpload";
 import { LoadingOutlined } from "@ant-design/icons";
@@ -18,7 +19,7 @@ const initialState = {
   categories: [],
   category: "",
   subs: [],
-  shipping: "",
+  shipping: [],
   quantity: "",
   images: [],
   color: [],
@@ -30,6 +31,7 @@ const ProductCreate = () => {
   const [subOptions, setSubOptions] = useState([]);
   const [colorOptions, setColorOptions] = useState([]);
   const [brandOptions, setBrandOptions] = useState([]);
+  const [shippingOpions, setShippingOPtions] = useState([]);
   const [showSub, setShowSub] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -38,7 +40,6 @@ const ProductCreate = () => {
 
   useEffect(() => {
     loadCategories();
-    // eslint-disable-next-line
   }, []);
 
   const loadCategories = () =>
@@ -73,6 +74,9 @@ const ProductCreate = () => {
     });
     getBrands(e.target.value).then((res) => {
       setBrandOptions(res.data);
+    });
+    getShippings(e.target.value).then((res) => {
+      setShippingOPtions(res.data);
     });
     setShowSub(true);
   };
@@ -109,6 +113,7 @@ const ProductCreate = () => {
               subOptions={subOptions}
               colorOptions={colorOptions}
               brandOptions={brandOptions}
+              shippingOpions={shippingOpions}
               showSub={showSub}
             />
           </div>
