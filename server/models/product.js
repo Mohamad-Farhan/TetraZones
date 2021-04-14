@@ -48,7 +48,7 @@ const productSchema = new mongoose.Schema(
     shippings: [
       {
         type: ObjectId,
-        ref: "Shipping"
+        ref: "Shipping",
       }
     ],
     colors: [

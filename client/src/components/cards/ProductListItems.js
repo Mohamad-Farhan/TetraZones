@@ -6,7 +6,7 @@ const ProductListItems = ({ product }) => {
     price,
     category,
     subs,
-    shipping,
+    shippings,
     colors,
     brands,
     quantity,
@@ -49,12 +49,19 @@ const ProductListItems = ({ product }) => {
         </li>
       )}
 
-      <li className="list-group-item">
-        <span className="label label-default label-pill pull-xs-left">
-          {shipping}
-        </span>
-        <div className="label label-default label-pill pull-xs-right">{" "}التوصيل</div>
-      </li>
+      {shippings && (
+        <li className="list-group-item">
+          {shippings.map((s) => (
+            <div
+              key={s._id}
+              className="label label-default label-pill pull-xs-left"
+            >
+              <div>{s.name}</div>
+            </div>
+          ))}
+          <div className="label label-default label-pill pull-xs-right">التوصيل </div>
+        </li>
+      )}
 
       {colors && (
         <li className="list-group-item">

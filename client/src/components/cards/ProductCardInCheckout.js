@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 const ProductCardInCheckout = ({ p }) => {
 
   const colors = p.colors
+  const shippings = p.shippings
+  const brands = p.brands
 
   let dispatch = useDispatch();
 
@@ -101,13 +103,17 @@ const ProductCardInCheckout = ({ p }) => {
             className="text-danger pointer"
           />
         </td>
-        <td className="text-center">
-          {p.shipping === "Free" ? (
-            <p>مجاني</p>
-          ) : (
-            <p>3 JD</p>
-          )}
-        </td>
+        
+          { shippings && 
+            <td className="text-center">
+              {shippings.map((s)=>(
+                <p key={s._id}>
+                  {s.name}
+                </p>
+              ))}
+            </td>
+          }
+        
         <td className="text-center">
           <input
             type="number"
@@ -131,7 +137,15 @@ const ProductCardInCheckout = ({ p }) => {
               ))}
           </select>
         </td>
-        <td>{p.brand}</td>
+        {brands && (
+          <td>
+            {brands.map((b)=>(
+              <p key={b._id}>
+                {b.name}
+              </p>
+            ))}
+          </td>
+        )}
         <td>{p.price} JD</td>
         <Link to={`/product/${p.slug}`}><td>{p.title}</td></Link>
         <td>

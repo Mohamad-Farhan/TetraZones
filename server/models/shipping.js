@@ -6,8 +6,6 @@ const shippingSchema = new mongoose.Schema(
             type: String,
             trim: true,
             required: "Name is required",
-            minlength: [1, "Too short"],
-            maxlength: [32, "Too long"],
         },
         slug: {
             type: String,
