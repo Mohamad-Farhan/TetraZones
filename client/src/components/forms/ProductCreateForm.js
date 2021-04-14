@@ -12,7 +12,6 @@ const ProductCreateForm = ({
   subOptions,
   colorOptions,
   brandOptions,
-  shippingOpions,
   showSub,
 }) => {
   // destructure
@@ -25,7 +24,7 @@ const ProductCreateForm = ({
     quantity,
     colors,
     brands,
-    shippings
+    shipping
   } = values;
 
   return (
@@ -90,22 +89,15 @@ const ProductCreateForm = ({
         </select>
       </div>
 
-      <div>
-        <label className='float-right'>الشحن</label>
-        <Select
-          mode="multiple"
-          style={{ width: "100%" }}
-          placeholder="Please select"
-          value={shippings}
-          onChange={(value) => setValues({ ...values, shippings: value })}
-        >
-          {
-            shippingOpions.map((s) => (
-              <Option key={s._id} value={s._id}>
-                {s.name}
-              </Option>
-            ))}
-        </Select>
+      <div className="form-group">
+        <label className='float-right'>التوصيل</label>
+        <input
+          type="number"
+          name="shipping"
+          className="form-control"
+          value={shipping}
+          onChange={handleChange}
+        />
       </div>
 
       <div>

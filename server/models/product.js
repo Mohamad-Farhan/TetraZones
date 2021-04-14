@@ -45,12 +45,12 @@ const productSchema = new mongoose.Schema(
     images: {
       type: Array,
     },
-    shippings: [
-      {
-        type: ObjectId,
-        ref: "Shipping",
-      }
-    ],
+    shipping: {
+      type: Number,
+      required: true,
+      trim: true,
+      maxlength: 4,
+    },
     colors: [
       {
         type: ObjectId,

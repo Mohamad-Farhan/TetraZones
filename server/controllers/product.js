@@ -256,20 +256,6 @@ const handleBrand = async (req, res, brand) => {
   res.json(products);
 };
 
-const handleShipping = async (req, res, shipping) => {
-  const products = await Product.find({ shippings: shipping })
-    .populate("category", "_id name")
-    .populate("subs", "_id name")
-    .populate("colors", "_id name")
-    .populate("brands", "_id name")
-    .populate("shipping", "_id name")
-    .populate("postedBy", "_id name")
-    .exec();
-
-  res.json(products);
-};
-
-
 exports.searchFilters = async (req, res) => {
   const {
     query,
@@ -279,7 +265,6 @@ exports.searchFilters = async (req, res) => {
     sub,
     color,
     brand,
-    shipping,
   } = req.body;
 
   if (query) {
@@ -309,9 +294,5 @@ exports.searchFilters = async (req, res) => {
 
   if (brand) {
     await handleBrand(req, res, brand);
-  }
-
-  if (shipping) {
-    await handleShipping(req, res, shipping);
   }
 }

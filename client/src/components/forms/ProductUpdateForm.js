@@ -6,6 +6,7 @@ const { Option } = Select;
 const ProductUpdateForm = ({
   handleSubmit,
   handleChange,
+  setValues,
   values,
   handleCategoryChange,
   categories,
@@ -60,18 +61,15 @@ const ProductUpdateForm = ({
       </div>
 
       <div className="form-group">
-        <label>Shipping</label>
-        <select
-          value={shipping === "Free" ? "Free" : "3JD"}
-          name="shipping"
+        <label>shipping</label>
+        <input
+          type="number"
+          name="price"
           className="form-control"
+          value={shipping}
           onChange={handleChange}
-        >
-          <option value="Free">Free</option>
-          <option value="3JD">3 JD</option>
-        </select>
+        />
       </div>
-
       <div className="form-group">
         <label>Quantity</label>
         <input
@@ -99,6 +97,40 @@ const ProductUpdateForm = ({
             ))}
         </select>
       </div>
+      {/* <div>
+        <label className='float-right'>اللون</label>
+        <Select
+          mode="multiple"
+          style={{ width: "100%" }}
+          placeholder="Please select"
+          value={colors}
+          onChange={(value) => setValues({ ...values, colors: value })}
+        >
+          {colorOptions.length &&
+            colorOptions.map((q) => (
+              <Option key={q._id} value={q._id}>
+                {q.name}
+              </Option>
+            ))}
+        </Select>
+      </div> */}
+      {/* <div>
+        <label className='float-right'>الماركة</label>
+        <Select
+          mode="multiple"
+          style={{ width: "100%" }}
+          placeholder="Please select"
+          value={brands}
+          onChange={(value) => setValues({ ...values, brands: value })}
+        >
+          {
+            brandOptions.map((b) => (
+              <Option key={b._id} value={b._id}>
+                {b.name}
+              </Option>
+            ))}
+        </Select>
+      </div> */}
 
       <div>
         <label>Sub Categories</label>
