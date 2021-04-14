@@ -11,7 +11,7 @@ const AdvertiseYourProduct = () => {
                     <div className='card'>
                         <div className='card-header'>
                             <h4 className='card-link col-md-5 float-right text-right'>
-                                الاعلان على (اسم الموقع)
+                               ALLNJO الاعلان على 
                             </h4>
                         </div>
                         <div>

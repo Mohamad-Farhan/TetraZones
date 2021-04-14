@@ -12,7 +12,7 @@ const JoinWithUs = () => {
                     <div className='card'>
                         <div className='card-header'>
                             <h4 className='card-link col-md-5 float-right text-right'>
-                                الانضمام الى (اسم الموقع)
+                                ALLNJO الانضمام الى
                             </h4>
                         </div>
                         <div>

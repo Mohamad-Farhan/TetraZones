@@ -31,7 +31,7 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> فايرس كورنا المستجد (كوفد-19)  TymonStore و</a>
+                                    <a href="#!" className="text-white border-footer"> ALLNJO فايرس كورنا المستجد (كوفد-19) و  </a>
                                 </li>
                                 <li>
                                     <a href="/user/history" className="text-white border-footer"> حسابك</a>
@@ -61,7 +61,7 @@ const Footer = () => {
                                     <a href="/jops" className="text-white border-footer"> وظائف</a>
                                 </li>
                                 <li>
-                                    <a href="/aboutUs" className="text-white border-footer">TymonStore معلومات عن</a>
+                                    <a href="/aboutUs" className="text-white border-footer">ALLNJO معلومات عن</a>
                                 </li>
                             </ul>
                         </div>
@@ -70,7 +70,7 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="/yourSaller" className="text-white border-footer">TymonStore البيع على </a>
+                                    <a href="/yourSaller" className="text-white border-footer">ALLNJO البيع على </a>
                                 </li>
                                 <li>
                                     <a href="/joinWithUs" className="text-white border-footer"> انضم لنا</a>
@@ -86,7 +86,7 @@ const Footer = () => {
 
             <div className="text-center p-3" style={{ backgroundcolor: 'rgba(0, 0, 0, 0.2)' }}>
                 © 2021 Copyright:
-                <a className="text-white" href="/"> TymonStore</a>
+                <a className="text-white" href="/"> ALLNJO</a>
             </div>
         </footer>
     );
