@@ -100,7 +100,7 @@ exports.productsCount = async (req, res) => {
 exports.productStar = async (req, res) => {
   const product = await Product.findById(req.params.productId).exec();
   const user = await User.findOne({ email: req.user.email }).exec();
-  const { star, comment } = req.body;
+  const { star } = req.body;
 
   let existingRatingObject = product.ratings.find(
     (ele) => ele.postedBy.toString() === user._id.toString()
@@ -111,7 +111,7 @@ exports.productStar = async (req, res) => {
     let ratingAdded = await Product.findByIdAndUpdate(
       product._id,
       {
-        $push: { ratings: { star, postedBy: user._id, comment, name: user.name } },
+        $push: { ratings: { star, postedBy: user._id, name: user.name } },
       },
       { new: true }
     ).exec();
@@ -122,7 +122,39 @@ exports.productStar = async (req, res) => {
       {
         ratings: { $elemMatch: existingRatingObject },
       },
-      { $set: { "ratings.$.star": star, "ratings.$.name": user.name } },
+      { $set: { "ratings.$.star": star } },
+      { new: true }
+    ).exec();
+    res.json(ratingUpdated);
+  }
+};
+
+exports.productComment = async (req, res) => {
+  const product = await Product.findById(req.params.productId).exec();
+  const user = await User.findOne({ email: req.user.email }).exec();
+  const { comment } = req.body;
+
+  let existingRatingObject = product.ratings.find(
+    (ele) => ele.postedBy.toString() === user._id.toString()
+  );
+
+  // if user haven't left rating yet, push it
+  if (existingRatingObject === undefined) {
+    let ratingAdded = await Product.findByIdAndUpdate(
+      product._id,
+      {
+        $push: { ratings: { comment, postedBy: user._id, name: user.name } },
+      },
+      { new: true }
+    ).exec();
+    res.json(ratingAdded);
+  } else {
+    // if user have already left rating, update it
+    const ratingUpdated = await Product.updateOne(
+      {
+        ratings: { $elemMatch: existingRatingObject },
+      },
+      { $set: { "ratings.$.comment": comment } },
       { new: true }
     ).exec();
     res.json(ratingUpdated);

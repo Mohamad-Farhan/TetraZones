@@ -17,7 +17,7 @@ import { useHistory } from "react-router-dom";
 const { TabPane } = Tabs;
 
 // this is childrend component of Product page
-const SingleProduct = ({ product, onStarClick, star }) => {
+const SingleProduct = ({ product, onStarClick, star, comment }) => {
   const [tooltip, setTooltip] = useState("Click to add");
 
   // redux

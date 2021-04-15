@@ -55,6 +55,17 @@ export const productStar = async (productId, star, authtoken) =>
     }
   );
 
+export const productComment = async (productId, comment, authtoken) =>
+  await axios.put(
+    `${process.env.REACT_APP_API}/product/comment/${productId}`,
+    { comment },
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
+
 export const getRelated = async (productId) =>
   await axios.get(`${process.env.REACT_APP_API}/product/related/${productId}`);
 

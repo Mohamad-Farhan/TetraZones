@@ -30,7 +30,7 @@ const RatingModal = ({ children }) => {
         {user ? "اترك تقيماً" : "سجل الدخول لتقيم"}
       </div>
       <Modal
-        title="Leave your rating"
+        title="اترك تقيماً"
         centered
         visible={modalVisible}
         onOk={() => {

@@ -16,6 +16,7 @@ const {
   productStar,
   listRelated,
   searchFilters,
+  productComment,
 } = require("../controllers/product");
 
 // routes
@@ -31,6 +32,8 @@ router.put("/product/:slug", authCheck, adminCheck, update);
 router.post("/products", list);
 // rating
 router.put("/product/star/:productId", authCheck, productStar);
+// Comment
+router.put("/product/comment/:productId", authCheck, productComment);
 // related
 router.get("/product/related/:productId", listRelated);
 // search
