@@ -40,7 +40,7 @@ const Footer = () => {
                                     <a href="/user/history" className="text-white border-footer"> مشترياتك</a>
                                 </li>
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> المساعدة </a>
+                                    <a href="/help" className="text-white border-footer"> المساعدة </a>
                                 </li>
                             </ul>
                         </div>
@@ -49,7 +49,7 @@ const Footer = () => {
 
                             <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a href="#!" className="text-white border-footer"> الدفع عند التوصيل</a>
+                                    <a href="/cashOnDelvirey" className="text-white border-footer"> الدفع عند التوصيل</a>
                                 </li>
                             </ul>
                         </div>
@@ -59,9 +59,6 @@ const Footer = () => {
                             <ul className="list-unstyled mb-0">
                                 <li>
                                     <a href="/jops" className="text-white border-footer"> وظائف</a>
-                                </li>
-                                <li>
-                                    <a href="/aboutUs" className="text-white border-footer">ALLNJO معلومات عن</a>
                                 </li>
                             </ul>
                         </div>
