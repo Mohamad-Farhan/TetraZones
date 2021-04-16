@@ -110,17 +110,17 @@ const SingleProduct = ({ product, onStarClick, star, comment }) => {
       <div className="col-md-7">
         {images && images.length ? (
           <Carousel showArrows={true} infiniteLoop >
-            {images && images.map((i) => <img src={i.url} key={i.public_id}/>)}
+            {images && images.map((i) => <img src={i.url} key={i.public_id} />)}
           </Carousel>
         ) : (
-            <Card cover={<img src={Laptop} className="mb-3 card-image" alt='jsx-a11y/alt-text'/>}></Card>
+          <Card cover={<img src={Laptop} className="mb-3 card-image" alt='jsx-a11y/alt-text' />}></Card>
         )}
 
         <Tabs type="card">
           <TabPane tab="تفاصيل المنتج" key="1" className='text-right'>
-           <div>
+            <div>
               {description && description}
-           </div>
+            </div>
           </TabPane>
           <TabPane tab="أخرى" key="2" className='text-right'>
             التواصل على الواتس على الرقم التالي 0785836823 لمعرفة المزيد عن المنتج

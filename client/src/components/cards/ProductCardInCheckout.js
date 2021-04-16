@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const ProductCardInCheckout = ({ p }) => {
 
   const colors = p.colors
-  const shippings = p.shippings
+  const shipping = p.shipping
   const brands = p.brands
 
   let dispatch = useDispatch();
@@ -104,15 +104,7 @@ const ProductCardInCheckout = ({ p }) => {
           />
         </td>
         
-          { shippings && 
-            <td className="text-center">
-              {shippings.map((s)=>(
-                <p key={s._id}>
-                  {s.name}
-                </p>
-              ))}
-            </td>
-          }
+        <td>{shipping} JD</td>
         
         <td className="text-center">
           <input
@@ -147,7 +139,7 @@ const ProductCardInCheckout = ({ p }) => {
           </td>
         )}
         <td>{p.price} JD</td>
-        <Link to={`/product/${p.slug}`}><td>{p.title}</td></Link>
+        <td><Link to={`/product/${p.slug}`}>{p.title}</Link></td>
         <td>
           <div style={{ width: "100px", height: "auto" }}>
             {p.images.length ? (
