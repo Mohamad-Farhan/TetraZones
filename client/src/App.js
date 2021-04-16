@@ -7,7 +7,7 @@ import { auth } from "./firebase";
 import { useDispatch } from "react-redux";
 import { currentUser } from "./functions/auth";
 import { LoadingOutlined } from "@ant-design/icons";
-import KomunicateChat from './components/ChatBot';
+import Whatsapp from './components/ChatBot';
 // using lazy
 const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
@@ -19,7 +19,6 @@ const YourSaller = lazy(() => import("./pages/FooterPages/partnerWithUs/Saller")
 const JoinWithUs = lazy(() => import("./pages/FooterPages/partnerWithUs/JoineWithUs"));
 const AdvertiseYourProduct = lazy(() => import("./pages/FooterPages/partnerWithUs/AdvertiseYourProduct"));
 const Jops = lazy(() => import("./pages/FooterPages/knowAboutUs/Jops"));
-const cashOnDelvirey = lazy(() => import("./pages/FooterPages/payWithUs/cashOnDelvirey"));
 
 const RegisterComplete = lazy(() => import("./pages/auth/RegisterComplete"));
 const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
@@ -108,7 +107,7 @@ const App = () => {
         </div>
       }
     >
-      <KomunicateChat />
+      <Whatsapp />
       <SideDrawer />
       <ToastContainer />
       <Switch>
@@ -120,7 +119,6 @@ const App = () => {
         <Route exact path="/joinWithUs" component={JoinWithUs} />
         <Route exact path="/advertiseYourProduct" component={AdvertiseYourProduct} />
         <Route exact path="/jops" component={Jops} />
-        <Route exact path="/cashOnDelvirey" component={cashOnDelvirey} />
         <Route exact path="/register/complete" component={RegisterComplete} />
         <Route exact path="/forgot/password" component={ForgotPassword} />
         <UserRoute exact path="/user/history" component={History} />
