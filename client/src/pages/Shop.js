@@ -32,7 +32,9 @@ const Shop = () => {
   const [brands, setBrands] = useState([]);
   // eslint-disable-next-line 
   const [sub, setSub] = useState("");
+  // eslint-disable-next-line 
   const [brand, setBrand] = useState("");
+  // eslint-disable-next-line 
   const [shipping, setShipping] = useState("");
 // eslint-disable-next-line 
   let dispatch = useDispatch();
@@ -222,42 +224,7 @@ const Shop = () => {
     fetchProducts({ brand });
   };
 
-  // 9. show products based on shipping yes/no
-  const showShipping = () => (
-    <>
-      <Checkbox
-        className="pb-2 pl-4 pr-4"
-        onChange={handleShippingchange}
-        value="Free"
-        checked={shipping === "Free"}
-      >
-        مجاني
-      </Checkbox>
-
-      <Checkbox
-        className="pb-2 pl-4 pr-4"
-        onChange={handleShippingchange}
-        value="3JD"
-        checked={shipping === "3JD"}
-      >
-        3JD
-      </Checkbox>
-    </>
-  );
-
-  const handleShippingchange = (e) => {
-    setSub("");
-    setBrand("");
-    dispatch({
-      type: "SEARCH_QUERY",
-      payload: { text: "" },
-    });
-    setPrice([0, 0]);
-    setCategoryIds([]);
-    setStar("");
-    setShipping(e.target.value);
-    fetchProducts({ shipping: e.target.value });
-  };
+  
 
   return (
     <>
@@ -342,21 +309,6 @@ const Shop = () => {
               >
                 <div style={{ maringTop: "-10px" }} className="pl-4 pr-4">
                   {showBrands()}
-                </div>
-              </SubMenu>
-
-              {/* shipping */}
-              <SubMenu
-              className=''
-                key="7"
-                title={
-                  <span className="h6">
-                    <DownSquareOutlined /> التوصيل
-                </span>
-                }
-              >
-                <div style={{ maringTop: "-10px" }} className="pr-5">
-                  {showShipping()}
                 </div>
               </SubMenu>
             </Menu>

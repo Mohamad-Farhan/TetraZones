@@ -83,12 +83,15 @@ const SingleProduct = ({ product, onStarClick, star, comment }) => {
         <Card
           actions={[
             <Tooltip placement="top" title={tooltip}>
+
+              {/* eslint-disable-next-line */}
               <a onClick={handleAddToCart} disabled={product.quantity < 1}>
                 <ShoppingCartOutlined className="text-danger" />
                 <br />
                 {product.quantity < 1 ? "المنتج غير موجود" : "اضف الى السلة"}
               </a>
             </Tooltip>,
+            // eslint-disable-next-line 
             <a onClick={handleAddToWishlist}>
               <HeartOutlined className="text-info" /> <br /> اضف الى المفضلة
             </a>,
@@ -110,7 +113,7 @@ const SingleProduct = ({ product, onStarClick, star, comment }) => {
       <div className="col-md-7">
         {images && images.length ? (
           <Carousel showArrows={true} infiniteLoop >
-            {images && images.map((i) => <img src={i.url} key={i.public_id} />)}
+            {images && images.map((i) => <img src={i.url} key={i.public_id} alt='productimage' />)}
           </Carousel>
         ) : (
           <Card cover={<img src={Laptop} className="mb-3 card-image" alt='jsx-a11y/alt-text' />}></Card>

@@ -228,8 +228,11 @@ const Checkout = ({ history }) => {
               className='text-right'
               type="password"
               placeholder="Password"
+              // eslint-disable-next-line 
               value={region}
+              // eslint-disable-next-line 
               type='text'
+              // eslint-disable-next-line 
               placeholder='المنطقة'
               onChange={(e) => {
                 setRegion(e.target.value)

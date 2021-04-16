@@ -33,14 +33,15 @@ const SideDrawer = () => {
           <div className="col">
             {p.images[0] ? (
               <>
-                <img src={p.images[0].url} style={imageStyle}  alt='product image'/>
+                {/* eslint-disable-next-line  */}
+                <img src={p.images[0].url} style={imageStyle} alt='product image' />
                 <p className="text-center bg-secondary text-light">
                   {p.title} x {p.count}
                 </p>
               </>
             ) : (
               <>
-                  <img src={laptop} style={imageStyle} alt='laptop'/>
+                <img src={laptop} style={imageStyle} alt='laptop' />
                 <p className="text-center bg-secondary text-light">
                   {p.title} x {p.count}
                 </p>

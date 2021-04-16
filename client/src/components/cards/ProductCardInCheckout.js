@@ -30,7 +30,9 @@ const ProductCardInCheckout = ({ p }) => {
         cart = JSON.parse(localStorage.getItem("cart"));
       }
 
+      // eslint-disable-next-line 
       cart.map((product, i) => {
+        // eslint-disable-next-line 
         if (product._id === p._id) {
           cart[i].count = count;
         }
@@ -59,6 +61,7 @@ const ProductCardInCheckout = ({ p }) => {
         cart = JSON.parse(localStorage.getItem("cart"));
       }
 
+      // eslint-disable-next-line 
       cart.map((product, i) => {
         if (product._id === p._id) {
           cart[i].color = color;
@@ -80,6 +83,8 @@ const ProductCardInCheckout = ({ p }) => {
       if (localStorage.getItem("cart")) {
         cart = JSON.parse(localStorage.getItem("cart"));
       }
+
+      // eslint-disable-next-line 
       cart.map((product, i) => {
         if (product._id === p._id) {
           cart.splice(i, 1);
@@ -103,9 +108,9 @@ const ProductCardInCheckout = ({ p }) => {
             className="text-danger pointer"
           />
         </td>
-        
+
         <td>{shipping} JD</td>
-        
+
         <td className="text-center">
           <input
             type="number"
@@ -131,7 +136,7 @@ const ProductCardInCheckout = ({ p }) => {
         </td>
         {brands && (
           <td>
-            {brands.map((b)=>(
+            {brands.map((b) => (
               <p key={b._id}>
                 {b.name}
               </p>
