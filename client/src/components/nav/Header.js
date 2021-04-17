@@ -67,7 +67,7 @@ const Header = () => {
       )}
       {user && (
         <SubMenu
-          title={'Hello' && user.name && user.name}
+          title={ user.name && user.name}
           className="nav-text-icon float-left hover"
           style={{ width: '155px' }}
         >
