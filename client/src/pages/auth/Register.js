@@ -118,7 +118,7 @@ const Register = ({ history }) => {
 
       <br />
       <button type="submit" className="btn btn-raised">
-        Register
+        انشئ الحساب
       </button>
       <br/>
       <br />
@@ -157,7 +157,7 @@ const Register = ({ history }) => {
       
       <div className="row">
         <div className="col-md-6 offset-md-3">
-            <h4 className='text-right'>تسجيل الدخول</h4>
+            <h4 className='text-right'>انشاء الحساب</h4>
             <br/>
           {registerForm()}
         </div>
