@@ -16,6 +16,7 @@ import {
   saveUserRegion
 } from "../functions/user";
 import "react-quill/dist/quill.snow.css";
+import Checkbox from "antd/lib/checkbox/Checkbox";
 
 const Checkout = ({ history }) => {
   const [products, setProducts] = useState([]);
@@ -337,7 +338,13 @@ const Checkout = ({ history }) => {
           <h4 className='text-right'>عنوان التسليم</h4>
           {showdetails()}
           <br />
-          <div className="row">
+          <div className='float-right'>
+            <Checkbox >اوافق على <a href='/privacy'>الشروط والاحكام</a></Checkbox>
+          </div>
+          <br/>
+          <br />
+
+          <div className='float-right'>
             <div className="col-md-4">
               <button
                 className="btn btn-primary float-right"
