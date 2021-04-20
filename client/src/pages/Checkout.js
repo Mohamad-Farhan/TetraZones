@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Button, Col, Form } from 'react-bootstrap';
+import { Col, Form } from 'react-bootstrap';
 import Header from '../components/nav/Header';
 import { toast } from "react-toastify";
 import {
@@ -71,52 +71,6 @@ const Checkout = ({ history }) => {
       setTotal(0);
       setTotalAfterDiscount(0);
       setCoupon("");
-    });
-  };
-
-  const saveDetailsToDb = () => {
-    saveUserAddress(user.token, address).then((res) => {
-      if (!address) {
-        toast.error("تاكد من اسم الشارع ورقم البناية")
-      } else {
-        setAddressSaved(true);
-      }
-    });
-    saveUserFirstName(user.token, firstName).then((res) => {
-      if (!firstName) {
-        toast.error("تاكد من الاسم الاول")
-      } else {
-        setFirstNameSaved(true);
-      }
-
-    });
-    saveUserLastName(user.token, lastName).then((res) => {
-      if (!lastName) {
-        toast.error("تاكد من الاسم الاخير")
-      } else {
-        setLastNameSaved(true);
-      }
-    });
-    saveUserCity(user.token, city).then((res) => {
-      if (!city) {
-        toast.error("تاكد من المدينة")
-      } else {
-        setCitySaved(true);
-      }
-    });
-    saveUserRegion(user.token, region).then((res) => {
-      if (!region) {
-        toast.error("تاكد من المنطقة")
-      } else {
-        setRegionSaved(true);
-      }
-    });
-    saveUserPhoneNumber(user.token, phoneNumber).then((res) => {
-      if (!phoneNumber || phoneNumber.length < 10) {
-        toast.error("تاكد من رقم الهاتف")
-      } else {
-        setPhoneNumberSaved(true);
-      }
     });
   };
 
@@ -240,7 +194,6 @@ const Checkout = ({ history }) => {
             />
           </Form.Group>
         </Form.Row>
-        <Button variant="primary" onClick={saveDetailsToDb} className='float-right'>حفظ</Button>
       </Form>
 
     </>
@@ -301,6 +254,49 @@ const Checkout = ({ history }) => {
         setTimeout(() => {
           history.push("/user/history");
         }, 1000);
+        saveUserAddress(user.token, address).then((res) => {
+          if (!address) {
+            toast.error("تاكد من اسم الشارع ورقم البناية")
+          } else {
+            setAddressSaved(true);
+          }
+        });
+        saveUserFirstName(user.token, firstName).then((res) => {
+          if (!firstName) {
+            toast.error("تاكد من الاسم الاول")
+          } else {
+            setFirstNameSaved(true);
+          }
+
+        });
+        saveUserLastName(user.token, lastName).then((res) => {
+          if (!lastName) {
+            toast.error("تاكد من الاسم الاخير")
+          } else {
+            setLastNameSaved(true);
+          }
+        });
+        saveUserCity(user.token, city).then((res) => {
+          if (!city) {
+            toast.error("تاكد من المدينة")
+          } else {
+            setCitySaved(true);
+          }
+        });
+        saveUserRegion(user.token, region).then((res) => {
+          if (!region) {
+            toast.error("تاكد من المنطقة")
+          } else {
+            setRegionSaved(true);
+          }
+        });
+        saveUserPhoneNumber(user.token, phoneNumber).then((res) => {
+          if (!phoneNumber || phoneNumber.length < 10) {
+            toast.error("تاكد من رقم الهاتف")
+          } else {
+            setPhoneNumberSaved(true);
+          }
+        });
       }
     });
   };
@@ -346,7 +342,7 @@ const Checkout = ({ history }) => {
               <button
                 className="btn btn-primary float-right"
                 onClick={createCashOrder}
-                disabled={!phoneNumberSaved || !firstNameSaved || !lastNameSaved}
+                disabled={phoneNumber.length < 10}
               >
                 شراء
                 </button>
