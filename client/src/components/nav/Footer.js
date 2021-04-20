@@ -61,6 +61,11 @@ const Footer = () => {
                                     <a href="/jops" className="text-white border-footer"> وظائف</a>
                                 </li>
                             </ul>
+                            <ul className="list-unstyled mb-0">
+                                <li>
+                                    <a href="/privacy" className="text-white border-footer"> خصوصية الموقع</a>
+                                </li>
+                            </ul>
                         </div>
                         <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                             <h5 className="text-uppercase footer-text-icon">كن شريكاً معنا</h5>
