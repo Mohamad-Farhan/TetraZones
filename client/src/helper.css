@@ -47,7 +47,7 @@ footer {
 @media screen and (max-width: 750px) {
     .search-nav {
         display: inline-block;
-        width: 250px;
+        width: 320px;
     }
 }
 
