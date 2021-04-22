@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Header from '../components/nav/Header';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
+import '../helper.css'
 
 const Home = () => {
   return (
@@ -28,22 +29,22 @@ const Home = () => {
         </AliceCarousel>
       </div>
 
-      <h3 className="text-center p-3 mt-5 mb-5 display-4" style={{ color: 'white', backgroundColor: '#FC9433' }}>
+      <h3 className="text-center p-3 mt-5 mb-5 display-4 home-background">
         <b>المنتجات الجديدة</b>
       </h3>
       <NewArrivals />
 
-      <h4 className="text-center p-3 mt-5 mb-5 display-4" style={{ color: 'white', backgroundColor: '#FC9433' }}>
+      <h4 className="text-center p-3 mt-5 mb-5 display-4 home-background">
         <b> الأكثر مبيعا</b>
       </h4>
       <BestSellers />
 
-      <h4 className="text-center p-3 mt-5 mb-5 display-4" style={{ color: 'white', backgroundColor: '#FC9433' }}>
+      <h4 className="text-center p-3 mt-5 mb-5 display-4 home-background">
         <b>الأقسام</b>
       </h4>
       <CategoryList />
 
-      <h4 className="text-center p-3 mt-5 mb-5 display-4" style={{ color: 'white', backgroundColor: '#FC9433' }}>
+      <h4 className="text-center p-3 mt-5 mb-5 display-4 home-background">
         <b> الأقسام الفرعية</b>
       </h4>
       <SubList />

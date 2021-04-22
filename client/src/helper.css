@@ -41,7 +41,7 @@ footer {
 }
 
 .nav-color {
-    background-color: #122D20;
+    background-color: #024134;
 }
 
 @media screen and (max-width: 750px) {
@@ -68,4 +68,9 @@ footer {
 
 .border-footer:hover {
     border-bottom: 1px solid white;
+}
+
+.home-background{
+    background-color:#ff8800;
+    color: white;
 }
