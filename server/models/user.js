@@ -36,6 +36,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       index: true
     },
+    question:{
+      type: String,
+      index: true,
+    },
 
     wishlist: [{ type: ObjectId, ref: "Product" }],
   },

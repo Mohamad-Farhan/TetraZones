@@ -30,6 +30,8 @@ const {
   regiones
 } = require("../controllers/user");
 
+const { saveQuestion, questions } = require("../controllers/question");
+
 router.post("/user/cart", authCheck, userCart); // save cart
 router.get("/user/cart", authCheck, getUserCart); // get cart
 router.delete("/user/cart", authCheck, emptyCart); // empty cart
@@ -64,10 +66,8 @@ router.post("/user/wishlist", authCheck, addToWishlist);
 router.get("/user/wishlist", authCheck, wishlist);
 router.put("/user/wishlist/:productId", authCheck, removeFromWishlist);
 
-// router.get("/user", (req, res) => {
-//   res.json({
-//     data: "hey you hit user API endpoint",
-//   });
-// });
+// Question
+router.post("/user/question", authCheck, saveQuestion);
+router.get("/user/questions", authCheck, questions);
 
 module.exports = router;
