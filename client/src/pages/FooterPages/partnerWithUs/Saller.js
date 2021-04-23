@@ -11,7 +11,7 @@ const YourSaller = () => {
                     <div className='card'>
                         <div className='card-header'>
                             <h4 className='card-link col-md-5 float-right text-right'>
-                                ALLNJO البيع على
+                                TetraZones البيع على
                             </h4>
                         </div>
                         <div>

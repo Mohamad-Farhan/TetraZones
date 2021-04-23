@@ -60,4 +60,11 @@ export const getUserRegiones = async (authtoken) =>
     },
   });
 
+  export const getUserQuestions = async (authtoken) =>
+  await axios.get(`${process.env.REACT_APP_API}/user/questions`, {
+    headers: {
+      authtoken,
+    },
+  });
+
   

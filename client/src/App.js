@@ -37,6 +37,7 @@ const SallerWishlist = lazy(() => import("./pages/saller/SallerWishlist"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 const SallerDashboard = lazy(() => import("./pages/saller/SallerDashborard"));
 const UserDetails = lazy(() => import("./components/order/UserDetails"));
+const UserQuestions = lazy(() => import("./components/users/UserQuestions"));
 const CategoryCreate = lazy(() =>
   import("./pages/admin/category/CategoryCreate")
 );
@@ -138,6 +139,7 @@ const App = () => {
           path="/saller/color/:slug"
           component={SallerColorUpdate} />
         <AdminRoute exact path="/admin/details" component={UserDetails} />
+        <AdminRoute exact path="/admin/questions" component={UserQuestions} />
         <AdminRoute exact path="/admin/category" component={CategoryCreate} />
         <AdminRoute exact path="/admin/color" component={ColorCreate} />
         <AdminRoute

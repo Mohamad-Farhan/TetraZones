@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+
 import Header from '../components/nav/Header';
 import { saveUSerQuestion } from '../functions/user';
 
@@ -12,7 +14,10 @@ const Help = () => {
 
 
     const saveQuestion = () => {
-        saveUSerQuestion(user.token, question).then()
+        saveUSerQuestion(user.token, question).then(()=>{
+            toast.success('سوف يتم مراجعة سؤالك شكرا لك')
+        })
+        
     }
 
     return (
