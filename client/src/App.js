@@ -114,7 +114,7 @@ const App = () => {
       <ToastContainer />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/help" component={Help} />
+        <UserRoute exact path="/user/help" component={Help} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/yourSaller" component={YourSaller} />
