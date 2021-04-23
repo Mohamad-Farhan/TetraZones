@@ -89,7 +89,7 @@ const Header = () => {
             </Item>
           )}
           <Item>
-            <Link to="/help">هل تحتاج مساعدة؟</Link>
+            <Link to="/user/help">هل تحتاج مساعدة؟</Link>
           </Item>
 
           <Item icon={<LogoutOutlined />} onClick={logout}>
