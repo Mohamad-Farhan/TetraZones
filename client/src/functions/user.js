@@ -194,3 +194,21 @@ export const createCashOrderForUser = async (
       },
     }
   );
+
+export const saveUSerQuestion = async (authtoken, question) =>
+  await axios.post(
+    `${process.env.REACT_APP_API}/user/question`,
+    { question },
+    {
+      headers: {
+        authtoken,
+      },
+    }
+  );
+
+export const getUserQuestions = async (authtoken) =>
+  await axios.get(`${process.env.REACT_APP_API}/user/qusetions`, {
+    headers: {
+      authtoken,
+    },
+  });
