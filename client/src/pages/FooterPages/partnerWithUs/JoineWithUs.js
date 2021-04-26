@@ -20,7 +20,7 @@ const JoinWithUs = () => {
                                 . يمكنك الانضمام لنا عبر مواقع التواصل الاجتماعي
                             </h6>
                             <section className="mb-3 text-center">
-                                <a className="btn btn-outline-black btn-floating m-1 font-size-icons" href="#!" role="button"><i className="fab fa-facebook-f"></i></a>
+                                <a className="btn btn-outline-black btn-floating m-1 font-size-icons" href="https://www.facebook.com/TetraZones-109210124641188" role="button"><i className="fab fa-facebook-f"></i></a>
 
                                 <a className="btn btn-outline-black btn-floating m-1 font-size-icons" href="#!" role="button"><i className="fab fa-twitter"></i></a>
 
