@@ -42,6 +42,7 @@ footer {
 
 .nav-color {
     background-color: #024134;
+    padding: 2px;
 }
 
 @media screen and (max-width: 750px) {
