@@ -16,7 +16,7 @@ const AdvertiseYourProduct = () => {
                         </div>
                         <div>
                             <h6 className='card-body text-right'>
-                               help@tetrazones.com يمكنك التواصل عبر الرقم التالي للاعلان او ارسال اميل 
+                                يمكنك التواصل على الرقم التالي 0785836823 أو ارسال اميل <a href='mailto: info@tetrazones.com'>اضغط هنا</a>
                             </h6>
                         </div>
                     </div>

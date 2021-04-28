@@ -16,7 +16,7 @@ const YourSaller = () => {
                         </div>
                         <div>
                             <h6 className='card-body text-right'>
-                              help@tetrazones.com  بالأتصال على الرقم التالي 0785836823 أو يمكنك ان ترسل أميل على الاميل التالي 
+                                بالأتصال على الرقم التالي 0785836823 أو يمكنك ان ترسل أميل على الاميل <a href='mailto: info@tetrazones.com'>اضغط هنا</a>
                             </h6>
                         </div>
                     </div>

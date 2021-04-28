@@ -16,9 +16,10 @@ const Jops = () => {
                         </div>
                         <div>
                             <h6 className='card-body text-right'>
-                         <a href='/hr@tetrazones.com'> HR@tetrazones.com</a> الى الاميل التالي  CV  أو ارسل ال  Linkedin  لا توجد وظائف حالياً عند التوفر سوف نعلن هنا و على 
+                           Linkedin  لا توجد وظائف حالياً عند التوفر سوف نعلن هنا و على 
                             </h6>
                         </div>
+                        <div><h6 className='card-body text-right'> او يمكنك ارسال سيرتتك الذاتية على الاميل  <a href='mailto: hr@tetrazones.com'>هنا</a> </h6></div>
                     </div>
                 </div>
             </div>
