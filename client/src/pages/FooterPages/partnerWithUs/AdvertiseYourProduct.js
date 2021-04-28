@@ -16,7 +16,7 @@ const AdvertiseYourProduct = () => {
                         </div>
                         <div>
                             <h6 className='card-body text-right'>
-                                يمكنك التواصل عبر الرقم التالي للاعلان او ارسال اميل (الاميل)
+                               help@tetrazones.com يمكنك التواصل عبر الرقم التالي للاعلان او ارسال اميل 
                             </h6>
                         </div>
                     </div>

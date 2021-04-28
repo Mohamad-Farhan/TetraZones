@@ -16,7 +16,8 @@ const Jops = () => {
                         </div>
                         <div>
                             <h6 className='card-body text-right'>
-                             Linkedin  لا توجد وظائف حالياً عند التوفر سوف نعلن هنا و على 
+                                Linkedin  لا توجد وظائف حالياً عند التوفر سوف نعلن هنا و على
+                                HR@tetrazones.com الى الاميل التالي  CV  أرسل ال
                             </h6>
                         </div>
                     </div>
