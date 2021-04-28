@@ -29,7 +29,7 @@ const UserDetails = () => {
     }, []);
 
     const showDetailsInTable = () => (
-        <table className="table table-bordered">
+        <table className="table caption-top">
             <thead>
                 <tr>
                     <th scope="col">User ID</th>
@@ -43,13 +43,13 @@ const UserDetails = () => {
             </thead>
             <tbody>
                 <tr>
-                    <td> <b>{firstNames.map((user) => (<div><th>{user._id}</th><br/></div>))}</b></td>
-                    <td>{firstNames.map((f) => (<div><th>{f.firstName}</th><br /></div>))}</td>
-                    <td>{lastNames.map((l) => (<div><th>{l.lastName}</th><br /></div>))}</td>
-                    <td>{phoneNumbers.map((p) => (<div><th>{p.phoneNumber}</th><br /></div>))}</td>
-                    <td>{cityes.map((c) => (<div><th>{c.city}</th><br /></div>))}</td>
-                    <td>{regiones.map((r) => (<div><th>{r.region}</th><br /></div>))}</td>
-                    <td>{addresses.map((a) => (<div><th>{a.address}</th><br /></div>))}</td>
+                    <th> <b>{firstNames.map((user) => (<div>{user._id}</div>))}</b></th>
+                    <th>{firstNames.map((f) => (<div>{f.firstName}<br /></div>))}</th>
+                    <th>{lastNames.map((l) => (<div>{l.lastName}<br /></div>))}</th>
+                    <th>{phoneNumbers.map((p) => (<div>{p.phoneNumber}<br /></div>))}</th>
+                    <th>{cityes.map((c) => (<div>{c.city}<br /></div>))}</th>
+                    <th>{regiones.map((r) => (<div>{r.region}<br /></div>))}</th>
+                    <th>{addresses.map((a) => (<div>{a.address}<br /></div>))}</th>
                 </tr>
             </tbody>
         </table>
