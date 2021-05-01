@@ -31,11 +31,7 @@ const Orders = ({ orders, handleStatusChange }) => {
             <td>{p.color}</td>
             <td>{p.count}</td>
             <td>
-              {p.product.shipping === "Free" ? (
-                <p>Free</p>
-              ) : (
-                <p>3 JD</p>
-              )}
+              {p.product.shipping + 'JD'}
             </td>
           </tr>
         ))}
