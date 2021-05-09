@@ -38,7 +38,7 @@ const Header = () => {
   };
 
   return (
-    <Menu onClick={handleClick} selectedKeys={[current]} mode='vertical' className='nav-color'>
+    <Menu onClick={handleClick} selectedKeys={[current]} mode='vertical' className='nav-color navBar'>
       <div className='float-right hover m-2'>
         <Link to="/">
           <img src={Logo} className='img-fluid' alt='logo'/>

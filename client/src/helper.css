@@ -1,12 +1,12 @@
 /* Helper class for me */
 
 .nav-text-icon {
-    color: white;
+    color: #dee0e6;
     font-size: medium;
 }
 
 .footer-text-icon {
-    color: white;
+    color: #dee0e6;
 }
 
 footer {
@@ -22,12 +22,12 @@ footer {
 
 .nav-text {
     font-size: 13px;
-    color: white;
+    color: #dee0e6;
 }
 
 .search-button {
     font-size: 20px;
-    color: white;
+    color: #dee0e6;
 }
 
 .search-nav {
@@ -41,19 +41,23 @@ footer {
 }
 
 .nav-color {
-    background-color: #232f3e;
-    padding: 2px;
+    background-color: #134e6f;
 }
 
-@media screen and (max-width: 750px) {
+.navBar {
+   padding: 2px;
+}
+
+@media screen and (max-width: 640px) {
     .search-nav {
         display: inline-block;
-        width: 320px;
+        width: 255px;
     }
 }
 
+
 .hover:hover {
-    border: 1px solid white;
+    border: 1px solid #dee0e6;
     border-radius: 5px;
 }
 
@@ -68,10 +72,10 @@ footer {
 }
 
 .border-footer:hover {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #dee0e6;
 }
 
-.home-background{
-    background-color:#ff9900;
-    color: white;
+.home-background {
+    background-color: #ff6150;
+    color: #dee0e6;
 }
