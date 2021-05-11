@@ -45,14 +45,7 @@ footer {
 }
 
 .navBar {
-   padding: 2px;
-}
-
-@media screen and (max-width: 640px) {
-    .search-nav {
-        display: inline-block;
-        width: 255px;
-    }
+    padding: 2px;
 }
 
 
@@ -78,4 +71,53 @@ footer {
 .home-background {
     background-color: #ff6150;
     color: #dee0e6;
+}
+
+.cover-image1 {
+    width: 100%;
+    height: 250px;
+    background-image: url('./images/cover.png');
+    background-size: 100% 100%;
+}
+
+.cover-image2 {
+    width: 100%;
+    height: 250px;
+    background-image: url('./images/cover.png');
+    background-size: 100% 100%;
+}
+
+.cover-image3 {
+    width: 100%;
+    height: 250px;
+    background-image: url('./images/cover.png');
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width: 640px) {
+    .search-nav {
+        display: inline-block;
+        width: 255px;
+    }
+
+    .cover-image1 {
+        width: 100%;
+        height: 120px;
+        background-image: url('./images/cover.png');
+        background-size: 100% 100%;
+    }
+
+    .cover-image2 {
+        width: 100%;
+        height: 120px;
+        background-image: url('./images/cover.png');
+        background-size: 100% 100%;
+    }
+
+    .cover-image3 {
+        width: 100%;
+        height: 120px;
+        background-image: url('./images/cover.png');
+        background-size: 100% 100%;
+    }
 }
