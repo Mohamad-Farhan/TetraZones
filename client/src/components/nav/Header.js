@@ -69,7 +69,7 @@ const Header = () => {
         <SubMenu
           title={ user.name && user.name}
           className="nav-text-icon float-left hover"
-          style={{ width: '155px' }}
+          // style={{ width: '170px' }}
         >
           {user && user.role === "subscriber" && (
             <Item>
