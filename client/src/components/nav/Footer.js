@@ -13,11 +13,9 @@ const Footer = () => {
                 <section className="mb-4">
                     <a className="btn btn-outline-light btn-floating m-1 border-radius" href="https://www.facebook.com/TetraZones-109210124641188" role="button"><i className="fab fa-facebook-f"></i></a>
 
-                    <a className="btn btn-outline-light btn-floating m-1 border-radius" href="#!" role="button"><i className="fab fa-twitter"></i></a>
+                    <a className="btn btn-outline-light btn-floating m-1 border-radius" href="https://twitter.com/ZonesTetra" role="button"><i className="fab fa-twitter"></i></a>
 
-                    <a className="btn btn-outline-light btn-floating m-1 border-radius" href="#!" role="button"><i className="fab fa-google"></i></a>
-
-                    <a className="btn btn-outline-light btn-floating m-1 border-radius" href="#!" role="button"><i className="fab fa-instagram"></i></a>
+                    <a className="btn btn-outline-light btn-floating m-1 border-radius" href="https://www.instagram.com/tetrazones" role="button"><i className="fab fa-instagram"></i></a>
 
                     <a className="btn btn-outline-light btn-floating m-1 border-radius" href="#!" role="button"><i className="fab fa-linkedin-in"></i></a>
 
