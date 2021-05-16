@@ -17,7 +17,7 @@ const Footer = () => {
 
                     <a className="btn btn-outline-light btn-floating m-1 border-radius" href="https://www.instagram.com/tetrazones" role="button"><i className="fab fa-instagram"></i></a>
 
-                    <a className="btn btn-outline-light btn-floating m-1 border-radius" href="#!" role="button"><i className="fab fa-linkedin-in"></i></a>
+                    <a className="btn btn-outline-light btn-floating m-1 border-radius" href="https://www.linkedin.com/company/tetrazones" role="button"><i className="fab fa-linkedin-in"></i></a>
 
                 </section>
 
