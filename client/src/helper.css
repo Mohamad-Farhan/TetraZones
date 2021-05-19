@@ -28,16 +28,23 @@ footer {
 .search-button {
     font-size: 20px;
     color: #dee0e6;
+    margin-top: 30px;
 }
 
 .search-nav {
-    width: 500px;
+    width: 450px;
     display: inline-block;
     border: 1px solid;
     border-radius: 5px;
     height: 35px;
     text-align: center;
     padding-right: 5px;
+    margin-top: 30px;
+}
+
+.navPostion {
+    position: relative;
+    top: 30px;
 }
 
 .nav-color {
@@ -94,10 +101,41 @@ footer {
     background-size: 100% 100%;
 }
 
+.logowidth {
+    width: 250px;
+}
+
 @media screen and (max-width: 640px) {
     .search-nav {
         display: inline-block;
-        width: 255px;
+        width: 280px;
+        margin-top: -20px;
+    }
+
+    .search-button {
+        font-size: 20px;
+        color: #dee0e6;
+        margin-top: -20px;
+    }
+
+    .navPostion {
+        position: relative;
+        top: 0px;
+    }
+
+    .userName {
+        width: 100px;
+    }
+
+    .yourOrder {
+        position: relative;
+        top: -95px;
+        right: -185px;
+    }
+
+    .logowidth {
+        width: 350px;
+        height: 120px;
     }
 
     .cover-image1 {

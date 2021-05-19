@@ -41,15 +41,15 @@ const Header = () => {
     <Menu onClick={handleClick} selectedKeys={[current]} mode='vertical' className='nav-color navBar'>
       <div className='float-right hover m-2'>
         <Link to="/">
-          <img src={Logo} className='img-fluid' alt='logo'/>
+          <img src={Logo} className='img-fluid logowidth' alt='logo' />
         </Link>
       </div>
 
-      <Item key="shop" icon={<ShoppingOutlined style={{ color: 'white', fontSize: '20px' }} />} className='float-right hover'>
+      <Item key="shop" icon={<ShoppingOutlined style={{ color: 'white', fontSize: '20px' }} />} className='float-right hover navPostion'>
         <Link to="/shop"><b className='nav-text-icon'>الكل</b></Link>
       </Item>
 
-      <Item key="cart" icon={<ShoppingCartOutlined style={{ color: 'white', fontSize: '20px' }} />} className='float-left hover'>
+      <Item key="cart" icon={<ShoppingCartOutlined style={{ color: 'white', fontSize: '20px' }} />} className='float-left hover navPostion'>
         <Link to="/cart">
           <Badge count={cart.length} offset={[9, 0]}>
             <b className='nav-text-icon'>السلة</b>
@@ -67,9 +67,8 @@ const Header = () => {
       )}
       {user && (
         <SubMenu
-          title={ user.name && user.name}
-          className="nav-text-icon float-left hover"
-          // style={{ width: '170px' }}
+          title={user.name && user.name}
+          className="nav-text-icon float-left hover navPostion userName"
         >
           {user && user.role === "subscriber" && (
             <Item>
@@ -101,9 +100,11 @@ const Header = () => {
         <Search />
       </span>
       {user && (
-        <Item className='hover width'>
-          <Link to="/user/history"><b className="nav-text-icon">مشترياتك</b></Link>
-        </Item>
+        <>
+          <Item className='hover width navPostion yourOrder'>
+            <Link to="/user/history"><b className="nav-text-icon" >مشترياتك</b></Link>
+          </Item>
+        </>
       )}
     </Menu>
   );
