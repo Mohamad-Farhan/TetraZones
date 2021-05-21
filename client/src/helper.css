@@ -28,7 +28,6 @@ footer {
 .search-button {
     font-size: 20px;
     color: #dee0e6;
-    margin-top: 30px;
 }
 
 .search-nav {
@@ -39,12 +38,6 @@ footer {
     height: 35px;
     text-align: center;
     padding-right: 5px;
-    margin-top: 30px;
-}
-
-.navPostion {
-    position: relative;
-    top: 30px;
 }
 
 .nav-color {
@@ -103,29 +96,40 @@ footer {
 
 .logowidth {
     width: 250px;
+    padding: 5px;
+}
+
+.navPostion {
+    position: relative;
+    top: 3px;
+}
+
+.cartCSS {
+    position: relative;
+    left: 200px;
+}
+
+.userName {
+    position: relative;
+    right: 100px;
 }
 
 @media screen and (max-width: 640px) {
     .search-nav {
         display: inline-block;
         width: 280px;
-        margin-top: -20px;
+    }
+
+    .cartCSS {
+        position: relative;
+        left: 180px;
     }
 
     .search-button {
         font-size: 20px;
         color: #dee0e6;
-        margin-top: -20px;
     }
 
-    .navPostion {
-        position: relative;
-        top: 0px;
-    }
-
-    .userName {
-        width: 100px;
-    }
 
     .yourOrder {
         position: relative;
@@ -134,8 +138,9 @@ footer {
     }
 
     .logowidth {
-        width: 350px;
-        height: 120px;
+        width: 320px;
+        position: relative;
+        right: 20px;
     }
 
     .cover-image1 {

@@ -49,7 +49,7 @@ const Header = () => {
         <Link to="/shop"><b className='nav-text-icon'>الكل</b></Link>
       </Item>
 
-      <Item key="cart" icon={<ShoppingCartOutlined style={{ color: 'white', fontSize: '20px' }} />} className='float-left hover navPostion'>
+      <Item key="cart" icon={<ShoppingCartOutlined style={{ color: 'white', fontSize: '20px' }} />} className='float-left hover navPostion cartCSS'>
         <Link to="/cart">
           <Badge count={cart.length} offset={[9, 0]}>
             <b className='nav-text-icon'>السلة</b>
@@ -60,7 +60,7 @@ const Header = () => {
       {!user && (
         <Item
           key="login"
-          className="nav-text-icon float-left hover"
+          className="nav-text-icon float-left hover userName"
           style={{ width: '150px' }} icon={<UserOutlined />}>
           <Link to="/login"><b className="nav-text-icon">تسجيل الدخول</b></Link>
         </Item>
@@ -99,13 +99,6 @@ const Header = () => {
       <span className="float-right m-2">
         <Search />
       </span>
-      {user && (
-        <>
-          <Item className='hover width navPostion yourOrder'>
-            <Link to="/user/history"><b className="nav-text-icon" >مشترياتك</b></Link>
-          </Item>
-        </>
-      )}
     </Menu>
   );
 };

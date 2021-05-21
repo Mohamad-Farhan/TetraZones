@@ -40,7 +40,7 @@ const Header = () => {
         <Menu onClick={handleClick} selectedKeys={[current]} mode='vertical' className='nav-color'>
             <div className='float-right hover m-2'>
                 <Link to="/">
-                    <img src={Logo} className='img-fluid' alt='logo'/>
+                    <img src={Logo} className='img-fluid logowidth' alt='logo'/>
                 </Link>
             </div>
 
