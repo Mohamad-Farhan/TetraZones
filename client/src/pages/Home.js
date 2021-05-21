@@ -15,10 +15,10 @@ const Home = () => {
       <Header />
       <div className="text-center">
         <AliceCarousel autoPlay disableButtonsControls infinite autoPlayInterval='4000'>
-          <Link to="/shop">
+          <Link to="/category/adotmnzly">
             <div className='cover-image1'></div>
           </Link>
-          <Link to='/category/adotmnzly'>
+          <Link to='/category/kssortoghzlkmbyotr'>
             <div className='cover-image2'></div>
           </Link>
           <Link to='/shop'>
