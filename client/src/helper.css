@@ -114,7 +114,7 @@ footer {
     right: 100px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 600px) {
     .search-nav {
         display: inline-block;
         width: 280px;
