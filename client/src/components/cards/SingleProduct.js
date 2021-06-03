@@ -17,7 +17,7 @@ import { useHistory } from "react-router-dom";
 const { TabPane } = Tabs;
 
 // this is childrend component of Product page
-const SingleProduct = ({ product, onStarClick, star, comment }) => {
+const SingleProduct = ({ product, onStarClick, star }) => {
   const [tooltip, setTooltip] = useState("Click to add");
 
   // redux
@@ -26,7 +26,7 @@ const SingleProduct = ({ product, onStarClick, star, comment }) => {
   // router
   let history = useHistory();
 
-  const { title, images, description, _id } = product;
+  const { title, images, description, others, _id } = product;
 
   const handleAddToCart = () => {
     // create cart array
@@ -126,7 +126,7 @@ const SingleProduct = ({ product, onStarClick, star, comment }) => {
             </div>
           </TabPane>
           <TabPane tab="أخرى" key="2" className='text-right'>
-            التواصل على الواتس على الرقم التالي 0785836823 لمعرفة المزيد عن المنتج
+            {others}
           </TabPane>
         </Tabs>
       </div>

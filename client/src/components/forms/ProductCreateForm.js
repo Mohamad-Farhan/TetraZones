@@ -18,6 +18,7 @@ const ProductCreateForm = ({
   const {
     title,
     description,
+    others,
     price,
     categories,
     subs,
@@ -47,6 +48,17 @@ const ProductCreateForm = ({
           name="description"
           className="form-control"
           value={description}
+          onChange={handleChange}
+        />
+      </div>
+
+      <div className="form-group">
+        <label className='float-right'>اخرى</label>
+        <textarea
+          type="text"
+          name="others"
+          className="form-control"
+          value={others}
           onChange={handleChange}
         />
       </div>

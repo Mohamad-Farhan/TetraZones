@@ -16,6 +16,10 @@ import {
 } from "@ant-design/icons";
 import Star from "../components/forms/Star";
 import Header from '../components/nav/Header';
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+import '../helper.css'
+import { Link } from "react-router-dom";
 
 const { SubMenu } = Menu;
 
@@ -224,8 +228,6 @@ const Shop = () => {
     fetchProducts({ brand });
   };
 
-  
-
   return (
     <>
       <Header />
@@ -320,6 +322,20 @@ const Shop = () => {
             ) : (
               <h4 className="text-danger text-right">المنتجات</h4>
             )}
+
+            <div>
+              <AliceCarousel autoPlay disableButtonsControls infinite autoPlayInterval='4000'>
+                <Link to="/brand/Hyperx">
+                  <div className='cover-shop1'></div>
+                </Link>
+                <Link to='/category/kssortoghzlkmbyotr'>
+                  <div className='cover-shop2'></div>
+                </Link>
+                <Link to='/shop'>
+                  <div className='cover-shop3'></div>
+                </Link>
+              </AliceCarousel>
+            </div>
 
             {products.length < 1 && <p>لا يوجد منتجات</p>}
 
